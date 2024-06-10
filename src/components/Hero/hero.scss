@@ -5,6 +5,7 @@
 
     .hero-left {
         h1 {
+            margin-bottom: 0;
             text-align: left;
             font-size: 58px;
             color: #fce015;
@@ -33,14 +34,39 @@
             border-radius: 10px;
 
             a {
-                img{
+                img {
                     margin-right: 5px;
                     margin-bottom: 5px;
                 }
+
                 display: flex;
                 text-decoration: none;
                 color: #000;
             }
+        }
+    }
+
+    @media (max-width: 1324px) {
+        grid-template-columns: repeat(1, 1fr);
+
+        h1 {
+            text-align: center !important;
+        }
+
+        p {
+            text-align: center !important;
+        }
+
+        .hero-left {
+            margin: 0  auto;
+
+            button {
+                margin: 30px auto 0 auto;
+            }
+        }
+
+        .hero-right {
+            display: none;
         }
     }
 }
