@@ -43,6 +43,7 @@ export const Services = () => {
                         </div>
                     ))}
                 </div>
+                <button className='button-default'><a href="https://www.linkedin.com/in/brendon-silva/"><img src="/icons/cta-icon.svg" alt='Contato' />Contato</a></button>
             </section>
         </>
     );
