@@ -1,4 +1,7 @@
+// services
+
 .services {
+    margin-bottom: 50px;
     h1 {
         font-size: 50px;
         color: #FCE015;
@@ -36,3 +39,33 @@
         }
     }
 }
+
+// skills
+.skills {
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+
+    div {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        align-items: center;
+        justify-items: center;
+
+        img {
+            width: 70px;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        @media (max-width: 1247px) {
+            grid-template-columns: repeat(6, 1fr);
+        }
+
+        @media (max-width: 768px) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+}
+
