@@ -1,0 +1,46 @@
+.hero {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    .hero-left {
+        h1 {
+            text-align: left;
+            font-size: 58px;
+            color: #fce015;
+        }
+
+        p {
+            text-align: left;
+
+            span {
+                color: #fce015;
+            }
+        }
+
+        button {
+            margin-top: 50px;
+            width: 150px;
+            display: flex;
+            justify-content: center;
+            outline: 0;
+            border: 0;
+            cursor: pointer;
+            will-change: box-shadow, transform;
+            background: radial-gradient(100% 100% at 100% 0%, #fffdef 0%, #fce015 100%);
+            box-shadow: 0px 2px 4px rgb(45 35 66 / 40%), 0px 7px 13px -3px #fce01533, inset 0px -3px 0px #fce01580;
+            padding: 13px 10px 10px 10px;
+            border-radius: 10px;
+
+            a {
+                img{
+                    margin-right: 5px;
+                    margin-bottom: 5px;
+                }
+                display: flex;
+                text-decoration: none;
+                color: #000;
+            }
+        }
+    }
+}
