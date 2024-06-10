@@ -57,25 +57,25 @@ export const Navbar = () => {
                             transition: {
                                 type: "spring",
                                 bounce: 0,
-                                duration: 0.3
+                                duration: 0.7
                             }
                         }
                     }}
 
                 >
                     <motion.li variants={itemVariants}>
-                        <a href="https://www.linkedin.com/in/brendon-silva/"><img src='/icons/linkedin.svg' /></a>
-                        <a href="https://github.com/BrendonSSilva"><img src='/icons/github.svg' /></a>
-                        <a href="https://github.com/BrendonSSilva"><img src='/icons/discord.svg' /></a>
+                        <a href="https://www.linkedin.com/in/brendon-silva/"><img src='/icons/linkedin.svg' alt='LinkedIn' /></a>
+                        <a href="https://github.com/BrendonSSilva"><img src='/icons/github.svg' alt='GitHub' /></a>
+                        <a href="https://github.com/BrendonSSilva"><img src='/icons/discord.svg' alt='Discord' /></a>
                     </motion.li>
                     <motion.li variants={itemVariants}>
-                        <a href="https://github.com/BrendonSSilva"><img src='/icons/Gmail.svg' /></a>
-                        <a href="https://github.com/BrendonSSilva"><img src='/icons/wpp.svg' /></a>
-                        <a href="https://github.com/BrendonSSilva"><img src='/icons/Instagram.svg' /></a>
+                        <a href="https://github.com/BrendonSSilva"><img src='/icons/Gmail.svg' alt='Gmail' /></a>
+                        <a href="https://github.com/BrendonSSilva"><img src='/icons/wpp.svg' alt='WhatsApp' /></a>
+                        <a href="https://github.com/BrendonSSilva"><img src='/icons/Instagram.svg' alt='Instagram' /></a>
                     </motion.li>
                 </motion.ul>
             </motion.nav>
-      <br/>
-      </>
+            <br />
+        </>
     );
 };
