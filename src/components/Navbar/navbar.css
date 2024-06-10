@@ -6,6 +6,7 @@ body {
 .menu {
   position: relative;
   margin-bottom: -220px;
+  margin-top: 30px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
