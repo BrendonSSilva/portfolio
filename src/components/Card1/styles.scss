@@ -1,0 +1,158 @@
+.page.card-1-page {
+  margin: 0;
+  display: grid;
+  place-items: center;
+  color: #f7f7f7;
+
+  .buttonHandle {
+    display: none;
+  }
+
+  @media(max-width:940px) {
+    .buttonHandle {
+      display: flex !important;
+    }
+    .hidden {
+      display: none !important;
+    }
+  }
+}
+
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-weight: 500;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  @media(max-width:1200px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media(max-width:940px) {
+    grid-template-columns: repeat(2, 1fr);
+
+    
+  }
+
+  @media(max-width:600px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  margin: 20px 0;
+  gap: 60px;
+}
+
+.card-1-page .card {
+  position: relative;
+  perspective: 1000px;
+  width: 200px;
+  height: 300px;
+  padding: 10px;
+}
+
+.card-1-page .card .front,
+.card-1-page .card .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backface-visibility: hidden;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 20px;
+  transition: 0.6s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-1-page .card .back {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0px;
+
+    h2 {
+      font-size: 13px;
+    }
+
+    p {
+      color: #ffffff80;
+      font-size: 10px;
+      margin: 0;
+      font-weight: 300;
+    }
+  }
+
+  ul {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+
+    li {
+      color: #fff;
+      text-align: center !important;
+      font-size: 14px;
+      font-weight: 300;
+    }
+  }
+
+  .links {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 0px;
+
+    img {
+      margin-top: 10px;
+      width: 26px;
+    }
+  }
+}
+
+
+.card-1-page .card .front h3,
+.card-1-page .card .front h4 {
+  height: 30px;
+  margin: 10px 0;
+}
+
+
+.card-1-page .back {
+  transform: rotateY(180deg);
+}
+
+.card-1-page input {
+  position: absolute;
+  scale: 0;
+}
+
+.card-1-page input:checked~.card .back {
+  transform: rotateY(0);
+}
+
+.card-1-page input:checked~.card .front {
+  transform: rotateY(-180deg);
+}
+
+.card img {
+  width: 100px;
+}
