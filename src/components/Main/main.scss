@@ -1,7 +1,7 @@
 // services
 
 .services {
-    margin-bottom: 50px;
+
     h1 {
         font-size: 50px;
         color: #FCE015;
@@ -42,7 +42,6 @@
 
 // skills
 .skills {
-    margin: 30px 0;
     display: flex;
     justify-content: center;
 
@@ -69,3 +68,135 @@
 
 }
 
+// courses
+.courses {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px auto 0 auto;
+    padding: 20px;
+    max-width: 1200px;
+}
+
+.courses-left {
+    margin-top: 50px;
+    text-align: left;
+    width: 65%;
+}
+
+.courses-left a {
+    color: #fff;
+}
+
+.courses-right {
+    font-weight: 300;
+    width: 45%;
+}
+
+.courses-right h1 {
+    color: #FCE015;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.courses-right p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.courses-right img {
+    width: 200px;
+    align-self: center;
+}
+
+.course-item {
+    display: flex;
+    margin-bottom: 20px;
+}
+.course-item.obc img{
+
+    height: 10px !important;
+}
+.course-item img {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.course-item div {
+    display: flex;
+    flex-direction: column;
+}
+
+.course-item h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.course-item p {
+    font-weight: 300;
+    margin-top: 3px;
+}
+
+.course-item.obc img {
+    height: 150px !important;
+}
+
+.course-item.b7web {
+    margin-top: 70px;
+}
+
+.course-item.b7web div {
+    margin-top: 25px;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .courses {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .courses-left,
+    .courses-right {
+        width: 100%;
+    }
+
+    .courses-left {
+        order: 2;
+    }
+
+    .courses-right {
+        order: 1;
+        text-align: center;
+    }
+
+    .courses-right img {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .courses-left {
+        margin-top: 20px;
+    }
+
+    .courses-right h1 {
+        font-size: 1.5em;
+    }
+
+    .courses-right p {
+        font-size: 1em;
+    }
+
+    .course-item img {
+        width: 100px;
+    }
+
+    .course-item h3 {
+        font-size: 1em;
+    }
+
+    .course-item p {
+        font-size: 0.9em;
+    }
+}
