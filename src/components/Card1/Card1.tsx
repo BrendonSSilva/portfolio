@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import "./styles.scss";
 import { motion, Variants } from 'framer-motion'
+import { Link } from 'react-router-dom';
 
 const cards = [
     {
@@ -9,8 +10,9 @@ const cards = [
         img: '/imgs/localzoom1.svg',
         description: [{ item: "Desenvolvimento Web" }, { item: "Designer" }, { item: "Social Medias" }],
         cargos: [{ cargo: "Dev Full-Stack" }, { cargo: "Social Media" }, { cargo: "Designer" }, { cargo: "Editor de Vídeos" }],
-        type: 0,
-        link: 'https://localzoom.com.br'
+        type: 1,
+        link: 'https://localzoom.com.br',
+        github: 'https://github.com/BrendonSSilva/Local-Zoom',
     },
     {
         name: "Workouts",
@@ -26,22 +28,112 @@ const cards = [
         img: '/imgs/rickapi.svg',
         description: [{ item: "ReactJs" }, { item: "TypeScript" }, { item: "Styled-Components" }],
         cargos: [{ cargo: "Dev Full-Stack" }],
-        type: 0,
+        type: 1,
+        github: 'https://github.com/BrendonSSilva/API-RickAndMorty',
         link: 'https://api-rick-and-morty-brendon.vercel.app/'
     }, {
-        name: "Consumo de API",
-        img: '/imgs/rickapi.svg',
-        description: [{ item: "ReactJs" }, { item: "TypeScript" }, { item: "Styled-Components" }],
-        cargos: [{ cargo: "Dev Full-Stack" }],
+        name: "Sal, Sabor & Brasa",
+        img: '/imgs/salsabor.png',
+        description: [{ item: "Criação de Artes Visuais" }, { item: "Editor de Vídeos" }, { item: "Social Media" }],
+        cargos: [{ cargo: "Social Media" }, { cargo: "Designer" }],
         type: 0,
-        link: 'https://api-rick-and-morty-brendon.vercel.app/'
+        link: ''
     }, {
-        name: "Consumo de API",
-        img: '/imgs/rickapi.svg',
-        description: [{ item: "ReactJs" }, { item: "TypeScript" }, { item: "Styled-Components" }],
-        cargos: [{ cargo: "Dev Full-Stack" }],
+        name: "Conveniência Central",
+        img: '/imgs/convcentral.png',
+        description: [{ item: "Criação de Artes Visuais" }],
+        cargos: [{ cargo: "Designer" }],
         type: 0,
-        link: 'https://api-rick-and-morty-brendon.vercel.app/'
+        link: 'https://www.instagram.com/p/C4bcBLSrHHy/'
+    }, {
+        name: "Kael Barber",
+        img: '/imgs/kael.png',
+        description: [{ item: "Criação de Artes Visuais" }, { item: "Editor de Vídeos" }, { item: "Social Media" }],
+        cargos: [{ cargo: "Social Media" }, { cargo: "Designer" }],
+        type: 0,
+        link: 'https://www.instagram.com/kaelbarberstudio/'
+    },
+    {
+        name: "Dexter Barbearia",
+        img: '/imgs/dexter.png',
+        description: [{ item: "Criação de Artes Visuais" }, { item: "Editor de Vídeos" }, { item: "Social Media" }],
+        cargos: [{ cargo: "Social Media" }, { cargo: "Designer" }],
+        type: 0,
+        link: 'https://www.instagram.com/dexterbarbeiro/'
+    },
+    {
+        name: "Oficina da Barba",
+        img: '/imgs/oficinadabarba.png',
+        description: [{ item: "Criação de Artes Visuais" }, { item: "Editor de Vídeos" }, { item: "Social Media" }],
+        cargos: [{ cargo: "Editor de Vídeos" }, { cargo: "Designer" }],
+        type: 0,
+        link: 'https://www.instagram.com/oficinadabarbaa/'
+    },
+    {
+        name: "AGEDES",
+        img: '/imgs/agedes.png',
+        description: [{ item: "Desenvolvimento de Sites" }, { item: "Criação de Artes Visuais" }],
+        cargos: [{ cargo: "Dev Front-End" }, { cargo: "Designer" }],
+        type: 0,
+        link: 'https://www.agedes.com.br'
+    },
+    {
+        name: "Meu Portfolio",
+        img: '/imgs/meuportfolio.png',
+        description: [{ item: "ReactJs" }, { item: "TypeScript" }, { item: "Design" }, { item: "Sass" }, { item: "Framer Motion" }],
+        cargos: [{ cargo: "Projeto de Estudo" }],
+        type: 1,
+        github: 'https://github.com/BrendonSSilva/portfolio'
+    },
+    {
+        name: "Raquel Despachante",
+        img: '/imgs/raquel.svg',
+        description: [{ item: "Criação de Logomarca" }],
+        cargos: [{ cargo: "Designer" }],
+        type: 0,
+        link: ''
+    },
+    {
+        name: "Nullstack",
+        img: '/imgs/nullstack.png',
+        description: [{ item: "Testes do Framework" }, { item: "Editor de Vídeos" }, { item: "Cria;áo de Artes Visuais" }, { item: "Social Media" }],
+        cargos: [{ cargo: "Dev Front-End" }, { cargo: "Designer" }, { cargo: "Social Media" }, { cargo: "Editor de Vídeos" }],
+        type: 1,
+        github: 'https://github.com/nullstack',
+        link: 'https://nullstack.app'
+    },
+    {
+        name: "SulLed",
+        img: '/imgs/sulled.png',
+        description: [{ item: "Criação deCronogramas/Temas de publicações" }, { item: "Editor de Vídeos" }, { item: "Social Media" }, { item: "Designer" }],
+        cargos: [{ cargo: "Social Media" }, { cargo: "Designer" }],
+        type: 0,
+        link: 'https://www.instagram.com/suledsls/'
+    },
+    {
+        name: "Linda Luz",
+        img: '/imgs/lindaluz.png',
+        description: [{ item: "Criação de Logomarca" }],
+        cargos: [{ cargo: "Designer" }],
+        type: 0,
+        link: ''
+    },
+    {
+        name: "SLS TEM",
+        img: '/imgs/slstem.png',
+        description: [{ item: "Desenvolvedor Front-End" }, { item: "Designer" }, { item: "Editor de Vídeos" }, { item: "Social Media" }],
+        cargos: [{ cargo: "Dev Front-End" }, { cargo: "Designer" }, { cargo: "Editor de Vídeos" }, { cargo: "Social Media" }],
+        type: 0,
+        github: 'https://github.com/BrendonSSilva/sls-tem',
+        link: 'https://www.slstem.com.br'
+    },
+    {
+        name: "Clasberg",
+        img: '/imgs/clasberg.png',
+        description: [{ item: "Criação de Artes Visuais" }],
+        cargos: [{ cargo: "Designer" }],
+        type: 0,
+        link: ''
     },
 ];
 
@@ -61,16 +153,10 @@ const cardVariants: Variants = {
     }
 };
 export const Card1 = () => {
-
-    const [show, setShow] = useState('hidden')
-
-    function handleCards() {
-        if (show == 'hidden') { setShow('') } else { setShow('hidden') }
-    }
     return (
         <section className="page card-1-page">
-            <button className="button-default buttonHandle" onClick={handleCards}>{show !== '' ? 'Ver Trabalhos' : 'Fechar'}</button>
-            <div className={`cards ${show}`}>
+            <Link to='/' className='btn-link'>Voltar</Link>
+            <div className={`cards`}>
                 {cards.map((card) => (
                     <motion.div
                         key={card.name}
@@ -120,8 +206,10 @@ export const Card1 = () => {
                     </motion.div>
                 ))}
             </div>
-            {show !== 'hidden' ? <button className="button-default buttonHandle" onClick={handleCards}>Fechar</button> : ''}
-            <button className='button-default' style={{ marginTop: '50px' }}><a href="https://www.linkedin.com/in/brendon-silva/"><img src="/icons/cta-icon.svg" alt='Contato' />Contato</a></button>
+            <div className="btns">
+                <button className='button-default' style={{ marginTop: '50px' }}><a href="https://www.linkedin.com/in/brendon-silva/"><img src="/icons/cta-icon.svg" alt='Contato' />Contato</a></button>
+                <Link to='/' className='btn-link'>Voltar</Link>
+            </div>
         </section>
     );
 };

@@ -4,10 +4,6 @@
   place-items: center;
   color: #f7f7f7;
 
-  .buttonHandle {
-    display: none;
-  }
-
   @media(max-width:940px) {
     .buttonHandle {
       background: radial-gradient(100% 100% at 100% 0%, #fffdef 0%, #fc8815 100%);
@@ -108,6 +104,7 @@ h4 {
     align-items: center;
     flex-direction: column;
     padding: 0;
+    background-color: transparent;
 
     li {
       color: #fff;
@@ -158,4 +155,12 @@ h4 {
 
 .card img {
   width: 100px;
+}
+
+.page {
+  .btns {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
 }
