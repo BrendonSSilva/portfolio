@@ -1,0 +1,31 @@
+.btn-link {
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #FCE015;
+    font-size: 16px;
+    background-color: transparent;
+    text-decoration: none;
+    color: #FCE015;
+}
+
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; // Adiciona para garantir que os itens sejam empilhados verticalmente
+}
+
+.cards-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; // Se desejar que os cartões se alinhem em várias linhas, se houver muitos
+    gap: 20px; // Espaçamento entre os cartões
+}
+
+.card-container {
+    flex: 1 1 200px; // Ajuste conforme necessário para o tamanho dos cartões
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
