@@ -1,0 +1,23 @@
+footer {
+    h2 {
+        color: #FCE015;
+        font-size: 26px;
+    }
+
+    p {
+        font-weight: 300;
+
+        span {
+            font-weight: 500;
+        }
+    }
+
+    .social {
+        margin-top: 35px;
+
+        img {
+            width: 32px;
+            margin: 20px 10px 0 10px;
+        }
+    }
+}
