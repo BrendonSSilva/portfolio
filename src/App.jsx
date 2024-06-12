@@ -1,12 +1,11 @@
 import './App.css'
-import { ThemeProvider } from 'styled-components';
-import { theme } from './assets/styles/index'
 import { Navbar } from './components/Navbar/Navbar';
 import { Hero } from './components/Hero/Hero';
 import { Services } from './components/Main/Services';
 import { Skills } from './components/Main/Skills';
 import { Card1 } from './components/Card1/Card1';
 import { Courses } from './components/Main/Courses';
+import { Footer } from './components/Footer/Footer';
 
 function App() {
   return (
@@ -17,8 +16,9 @@ function App() {
       <Skills />
       <Card1 />
       <Courses/>
-      <ThemeProvider theme={theme}>
-      </ThemeProvider>
+      <Footer/>
+      {/* <ThemeProvider theme={theme}>
+      </ThemeProvider> */}
     </>
   )
 }
