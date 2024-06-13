@@ -9,29 +9,28 @@ const cards = [
     {
         name: "Local Zoom",
         img: '/imgs/localzoom1.svg',
-        description: [{ item: "Desenvolvimento Web" }, { item: "Designer" }, { item: "Social Medias" }],
+        description: [{ item: "Desenvolvimento Web" }, { item: "Designer" }, { item: "Social Medias" }, { item: "12/23 - 04/24" }],
         cargos: [{ cargo: "Dev Full-Stack" }, { cargo: "Social Media" }, { cargo: "Designer" }, { cargo: "Editor de Vídeos" }],
         type: 1,
         link: 'https://localzoom.com.br',
         github: 'https://github.com/BrendonSSilva/Local-Zoom',
     },
     {
-        name: "Workouts",
-        img: '/imgs/gym.svg',
-        cargos: [{ cargo: "Dev Full-Stack" }],
-        description: [{ item: "NodeJs" }, { item: "MongoDB" }, { item: "ReactJs + Vite" }, { item: "TypeScript" }],
+        name: "Nullstack",
+        img: '/imgs/nullstack.png',
+        description: [{ item: "Testes do Framework" }, { item: "Editor de Vídeos" }, { item: "Cria;áo de Artes Visuais" }, { item: "Social Media" },{ item: "03/23 - 10/23" }],
+        cargos: [{ cargo: "Dev Front-End" }, { cargo: "Designer" }, { cargo: "Social Media" }, { cargo: "Editor de Vídeos" }],
         type: 1,
-        github: 'https://github.com/BrendonSSilva/gym-workouts',
-        link: ''
+        github: 'https://github.com/nullstack',
+        link: 'https://nullstack.app'
     },
     {
-        name: "Consumo de API",
-        img: '/imgs/rickapi.svg',
-        description: [{ item: "ReactJs" }, { item: "TypeScript" }, { item: "Styled-Components" }],
-        cargos: [{ cargo: "Dev Full-Stack" }],
-        type: 1,
-        github: 'https://github.com/BrendonSSilva/API-RickAndMorty',
-        link: 'https://api-rick-and-morty-brendon.vercel.app/'
+        name: "AGEDES",
+        img: '/imgs/agedes.png',
+        description: [{ item: "Desenvolvimento de Sites" }, { item: "Criação de Artes Visuais" },{ item: "03/23 - 10/23 | 06/24 - Atualmente" }],
+        cargos: [{ cargo: "Dev Front-End" }, { cargo: "Designer" }],
+        type: 0,
+        link: 'https://www.agedes.com.br'
     }
 ];
 
