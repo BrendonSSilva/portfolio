@@ -8,17 +8,34 @@ const cards = [
     {
         name: "Local Zoom",
         img: '/imgs/localzoom1.svg',
-        description: [{ item: "Desenvolvimento Web" }, { item: "Designer" }, { item: "Social Medias" }],
+        description: [{ item: "Desenvolvimento Web" }, { item: "Designer" }, { item: "Social Medias" }, { item: "12/23 - 04/24" }],
         cargos: [{ cargo: "Dev Full-Stack" }, { cargo: "Social Media" }, { cargo: "Designer" }, { cargo: "Editor de Vídeos" }],
         type: 1,
         link: 'https://localzoom.com.br',
         github: 'https://github.com/BrendonSSilva/Local-Zoom',
     },
     {
+        name: "Nullstack",
+        img: '/imgs/nullstack.png',
+        description: [{ item: "Testes do Framework" }, { item: "Editor de Vídeos" }, { item: "Cria;áo de Artes Visuais" }, { item: "Social Media" },{ item: "03/23 - 10/23" }],
+        cargos: [{ cargo: "Dev Front-End" }, { cargo: "Designer" }, { cargo: "Social Media" }, { cargo: "Editor de Vídeos" }],
+        type: 1,
+        github: 'https://github.com/nullstack',
+        link: 'https://nullstack.app'
+    },
+    {
+        name: "AGEDES",
+        img: '/imgs/agedes.png',
+        description: [{ item: "Desenvolvimento de Sites" }, { item: "Criação de Artes Visuais" },{ item: "03/23 - 10/23 | 06/24 - Atualmente" }],
+        cargos: [{ cargo: "Dev Front-End" }, { cargo: "Designer" }],
+        type: 0,
+        link: 'https://www.agedes.com.br'
+    },
+    {
         name: "Workouts",
         img: '/imgs/gym.svg',
         cargos: [{ cargo: "Dev Full-Stack" }],
-        description: [{ item: "NodeJs" }, { item: "MongoDB" }, { item: "ReactJs + Vite" }, { item: "TypeScript" }],
+        description: [{ item: "NodeJs" }, { item: "MongoDB" }, { item: "ReactJs + Vite" }, { item: "TypeScript" }, { item: "12/23 - 01/23" }],
         type: 1,
         github: 'https://github.com/BrendonSSilva/gym-workouts',
         link: ''
@@ -26,7 +43,7 @@ const cards = [
     {
         name: "Consumo de API",
         img: '/imgs/rickapi.svg',
-        description: [{ item: "ReactJs" }, { item: "TypeScript" }, { item: "Styled-Components" }],
+        description: [{ item: "ReactJs" }, { item: "TypeScript" }, { item: "Styled-Components" }, { item: "01/24 - 01/24" }],
         cargos: [{ cargo: "Dev Full-Stack" }],
         type: 1,
         github: 'https://github.com/BrendonSSilva/API-RickAndMorty',
@@ -41,14 +58,14 @@ const cards = [
     }, {
         name: "Conveniência Central",
         img: '/imgs/convcentral.png',
-        description: [{ item: "Criação de Artes Visuais" }],
+        description: [{ item: "Criação de Artes Visuais" }, { item: "2024" }],
         cargos: [{ cargo: "Designer" }],
         type: 0,
         link: 'https://www.instagram.com/p/C4bcBLSrHHy/'
     }, {
         name: "Kael Barber",
         img: '/imgs/kael.png',
-        description: [{ item: "Criação de Artes Visuais" }, { item: "Editor de Vídeos" }, { item: "Social Media" }],
+        description: [{ item: "Criação de Artes Visuais" }, { item: "Editor de Vídeos" }, { item: "Social Media" }, { item: "2022" }],
         cargos: [{ cargo: "Social Media" }, { cargo: "Designer" }],
         type: 0,
         link: 'https://www.instagram.com/kaelbarberstudio/'
@@ -56,7 +73,7 @@ const cards = [
     {
         name: "Dexter Barbearia",
         img: '/imgs/dexter.png',
-        description: [{ item: "Criação de Artes Visuais" }, { item: "Editor de Vídeos" }, { item: "Social Media" }],
+        description: [{ item: "Criação de Artes Visuais" }, { item: "Editor de Vídeos" }, { item: "Social Media" }, { item: "2022" }],
         cargos: [{ cargo: "Social Media" }, { cargo: "Designer" }],
         type: 0,
         link: 'https://www.instagram.com/dexterbarbeiro/'
@@ -64,23 +81,15 @@ const cards = [
     {
         name: "Oficina da Barba",
         img: '/imgs/oficinadabarba.png',
-        description: [{ item: "Criação de Artes Visuais" }, { item: "Editor de Vídeos" }, { item: "Social Media" }],
+        description: [{ item: "Criação de Artes Visuais" }, { item: "Editor de Vídeos" }, { item: "Social Media" }, { item: "2023/24" }],
         cargos: [{ cargo: "Editor de Vídeos" }, { cargo: "Designer" }],
         type: 0,
         link: 'https://www.instagram.com/oficinadabarbaa/'
     },
     {
-        name: "AGEDES",
-        img: '/imgs/agedes.png',
-        description: [{ item: "Desenvolvimento de Sites" }, { item: "Criação de Artes Visuais" }],
-        cargos: [{ cargo: "Dev Front-End" }, { cargo: "Designer" }],
-        type: 0,
-        link: 'https://www.agedes.com.br'
-    },
-    {
         name: "Meu Portfolio",
         img: '/imgs/meuportfolio.png',
-        description: [{ item: "ReactJs" }, { item: "TypeScript" }, { item: "Design" }, { item: "Sass" }, { item: "Framer Motion" }],
+        description: [{ item: "ReactJs" }, { item: "TypeScript" }, { item: "Design" }, { item: "Sass" }, { item: "Framer Motion" }, { item: "2024" }],
         cargos: [{ cargo: "Projeto de Estudo" }],
         type: 1,
         github: 'https://github.com/BrendonSSilva/portfolio'
@@ -88,24 +97,15 @@ const cards = [
     {
         name: "Raquel Despachante",
         img: '/imgs/raquel.svg',
-        description: [{ item: "Criação de Logomarca" }],
+        description: [{ item: "Criação de Logomarca" }, { item: "2024" }],
         cargos: [{ cargo: "Designer" }],
         type: 0,
         link: ''
     },
     {
-        name: "Nullstack",
-        img: '/imgs/nullstack.png',
-        description: [{ item: "Testes do Framework" }, { item: "Editor de Vídeos" }, { item: "Cria;áo de Artes Visuais" }, { item: "Social Media" }],
-        cargos: [{ cargo: "Dev Front-End" }, { cargo: "Designer" }, { cargo: "Social Media" }, { cargo: "Editor de Vídeos" }],
-        type: 1,
-        github: 'https://github.com/nullstack',
-        link: 'https://nullstack.app'
-    },
-    {
         name: "SulLed",
         img: '/imgs/sulled.png',
-        description: [{ item: "Criação deCronogramas/Temas de publicações" }, { item: "Editor de Vídeos" }, { item: "Social Media" }, { item: "Designer" }],
+        description: [{ item: "Criação deCronogramas/Temas de publicações" }, { item: "Editor de Vídeos" }, { item: "Social Media" }, { item: "Designer" }, { item: "08/23 - 11/23" }],
         cargos: [{ cargo: "Social Media" }, { cargo: "Designer" }],
         type: 0,
         link: 'https://www.instagram.com/suledsls/'
@@ -113,7 +113,7 @@ const cards = [
     {
         name: "Linda Luz",
         img: '/imgs/lindaluz.png',
-        description: [{ item: "Criação de Logomarca" }],
+        description: [{ item: "Criação de Logomarca" }, { item: "2022" }],
         cargos: [{ cargo: "Designer" }],
         type: 0,
         link: ''
@@ -121,7 +121,7 @@ const cards = [
     {
         name: "SLS TEM",
         img: '/imgs/slstem.png',
-        description: [{ item: "Desenvolvedor Front-End" }, { item: "Designer" }, { item: "Editor de Vídeos" }, { item: "Social Media" }],
+        description: [{ item: "Desenvolvedor Front-End" }, { item: "Designer" }, { item: "Editor de Vídeos" }, { item: "Social Media" }, { item: "09/23 - 12/23" }],
         cargos: [{ cargo: "Dev Front-End" }, { cargo: "Designer" }, { cargo: "Editor de Vídeos" }, { cargo: "Social Media" }],
         type: 0,
         github: 'https://github.com/BrendonSSilva/sls-tem',
@@ -130,7 +130,7 @@ const cards = [
     {
         name: "Clasberg",
         img: '/imgs/clasberg.png',
-        description: [{ item: "Criação de Artes Visuais" }],
+        description: [{ item: "Criação de Artes Visuais" }, { item: "2022" }],
         cargos: [{ cargo: "Designer" }],
         type: 0,
         link: ''
