@@ -52,6 +52,10 @@ const cardVariants: Variants = {
 };
 export const Jobs = () => {
 
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
     return (
         <section className="page card-1-page">
             <div className={`cards-link`}>
@@ -104,7 +108,7 @@ export const Jobs = () => {
                     </motion.div>
                 ))}
             </div>
-            <Link to='/trabalhos' className='btn-link'>Ver Mais!</Link>
+            <Link to='/trabalhos' onClick={scrollToTop} className='btn-link'>Ver Mais!</Link>
         </section>
     );
 };
