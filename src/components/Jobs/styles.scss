@@ -18,19 +18,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; // Adiciona para garantir que os itens sejam empilhados verticalmente
+    flex-direction: column; 
 }
 
 .cards-link {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap; // Se desejar que os cartões se alinhem em várias linhas, se houver muitos
-    gap: 20px; // Espaçamento entre os cartões
+    flex-wrap: wrap;
+    gap: 20px; 
 }
 
 .card-container {
-    flex: 1 1 200px; // Ajuste conforme necessário para o tamanho dos cartões
+    flex: 1 1 200px;
     display: flex;
     justify-content: center;
     align-items: center;
