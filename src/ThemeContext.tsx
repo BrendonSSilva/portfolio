@@ -1,3 +1,4 @@
+// themeContext adicionado para possíveis novas atualizações do portfolio
 import React, { createContext, useContext, useState } from 'react';
 
 interface ContextType {
