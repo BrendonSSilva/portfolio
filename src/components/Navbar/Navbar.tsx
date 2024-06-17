@@ -66,12 +66,11 @@ export const Navbar = () => {
                     <motion.li variants={itemVariants}>
                         <a href="https://www.linkedin.com/in/brendon-silva/"><img src='/icons/linkedin.svg' alt='LinkedIn' /></a>
                         <a href="https://github.com/BrendonSSilva"><img src='/icons/github.svg' alt='GitHub' /></a>
-                        <a href="https://github.com/BrendonSSilva"><img src='/icons/discord.svg' alt='Discord' /></a>
+                        <a href="mailto:brendon.dasilva03@gmail.com"><img src='/icons/Gmail.svg' alt='Gmail' /></a>
                     </motion.li>
                     <motion.li variants={itemVariants}>
-                        <a href="https://github.com/BrendonSSilva"><img src='/icons/Gmail.svg' alt='Gmail' /></a>
-                        <a href="https://github.com/BrendonSSilva"><img src='/icons/wpp.svg' alt='WhatsApp' /></a>
-                        <a href="https://github.com/BrendonSSilva"><img src='/icons/Instagram.svg' alt='Instagram' /></a>
+                        <a href="https://wa.me/5553984070032"><img src='/icons/wpp.svg' alt='WhatsApp' /></a>
+                        <a href="https://www.instagram.com/brendonsilva03"><img src='/icons/Instagram.svg' alt='Instagram' /></a>
                     </motion.li>
                 </motion.ul>
             </motion.nav>
