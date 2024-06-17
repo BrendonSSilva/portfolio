@@ -1,4 +1,5 @@
 import './App.css'
+import { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Navbar } from './components/Navbar/Navbar';
 import { Hero } from './components/Hero/Hero';
@@ -9,31 +10,41 @@ import { Courses } from './components/Main/Courses';
 import { Footer } from './components/Footer/Footer';
 import { Jobs } from './components/Jobs/Jobs';
 
-function App() {
+const Home = () => {
+  useEffect(() => {
+    document.title = 'Brendon Silva - Desenvolvedor Full-Stack e Designer';
+  }, []);
+
   return (
     <>
-      <Router>
-        <Routes>
-          <Route path="/" element={
-            <>
-              <Navbar />
-              <Hero />
-              <Services />
-              <Skills />
-              <Jobs />
-              <Courses />
-              <Footer />
-            </>
-          } />
-          <Route path="/trabalhos" element={<Card1 route='' />} />
-        </Routes>
-      </Router>
-
-      {/* <ThemeProvider theme={theme}>
-      </ThemeProvider> */}
+      <Navbar />
+      <Hero />
+      <Services />
+      <Skills />
+      <Jobs />
+      <Courses />
+      <Footer />
     </>
-  )
-}
+  );
+};
 
-export default App
+const Trabalhos = () => {
+  useEffect(() => {
+    document.title = 'Trabalhos - Brendon Silva';
+  }, []);
 
+  return <Card1 route='' />;
+};
+
+const App = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/trabalhos" element={<Trabalhos />} />
+      </Routes>
+    </Router>
+  );
+};
+
+export default App;
