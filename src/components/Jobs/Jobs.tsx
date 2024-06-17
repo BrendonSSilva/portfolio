@@ -9,7 +9,7 @@ const cards = [
     {
         name: "Local Zoom",
         img: '/imgs/localzoom1.svg',
-        description: [{ item: "Desenvolvimento Web" }, { item: "Designer" }, { item: "Social Medias" }, { item: "12/23 - 04/24" }],
+        description: [{ item: "Desenvolvimento Web" }, { item: "Designer" }, { item: "Social Media" }, { item: "12/23 - 04/24" }],
         cargos: [{ cargo: "Dev Full-Stack" }, { cargo: "Social Media" }, { cargo: "Designer" }, { cargo: "Editor de Vídeos" }],
         type: 1,
         link: 'https://localzoom.com.br',
@@ -27,7 +27,7 @@ const cards = [
     {
         name: "AGEDES",
         img: '/imgs/agedes.png',
-        description: [{ item: "Desenvolvimento de Sites" }, { item: "Criação de Artes Visuais" },{ item: "03/23 - 10/23 | 06/24 - Atualmente" }],
+        description: [{ item: "Desenvolvimento de Sites" }, { item: "Criação de Artes Visuais" },{ item: "08/22 - 02/23" }],
         cargos: [{ cargo: "Dev Front-End" }, { cargo: "Designer" }],
         type: 0,
         link: 'https://www.agedes.com.br'
