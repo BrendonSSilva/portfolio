@@ -27,7 +27,7 @@ const cards = [
     {
         name: "AGEDES",
         img: '/imgs/agedes.png',
-        description: [{ item: "Desenvolvimento de Sites" }, { item: "Criação de Artes Visuais" },{ item: "08/22 - 02/23" }],
+        description: [{ item: "Desenvolvimento de Sites" }, { item: "Criação de Artes Visuais" },{ item: "08/22 - 02/23 | 05/24 - Atualmente" }],
         cargos: [{ cargo: "Dev Front-End" }, { cargo: "Designer" }],
         type: 0,
         link: 'https://www.agedes.com.br'
