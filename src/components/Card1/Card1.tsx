@@ -85,6 +85,27 @@ const cards = [
         cargos: [{ cargo: "Designer" }],
         type: 0,
         link: 'https://www.instagram.com/p/C4bcBLSrHHy/'
+    }, {
+        name: "Fabrício Radmann Eventos",
+        img: '/imgs/radmanneventos.jpg',
+        description: [{ item: "Criação de Artes Visuais" }, { item: "2024" }],
+        cargos: [{ cargo: "Designer" }],
+        type: 0,
+        link: 'https://www.instagram.com/buffetfabricioradmann/'
+    }, {
+        name: "Restaurante Estância 21",
+        img: '/imgs/estancia.png',
+        description: [{ item: "Criação de Artes Visuais" }, { item: "2024" }],
+        cargos: [{ cargo: "Designer" }],
+        type: 0,
+        link: 'https://www.instagram.com/restauranteestancia21/'
+    }, {
+        name: "Klar Odontologia",
+        img: '/imgs/klar.png',
+        description: [{ item: "Criação de Artes Visuais" }, { item: "2024" }],
+        cargos: [{ cargo: "Designer" }],
+        type: 0,
+        link: 'https://www.instagram.com/klarodontologia/'
     },
     {
         name: "Sal, Sabor & Brasa",
