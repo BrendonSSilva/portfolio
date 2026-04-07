@@ -1,0 +1,117 @@
+.section-label {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: #FCE015;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 16px;
+    position: relative;
+    padding-left: 24px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 16px;
+        height: 2px;
+        background: #FCE015;
+    }
+}
+
+.about {
+    padding: 80px 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .about-header {
+        text-align: center;
+        margin-bottom: 60px;
+
+        h2 {
+            font-size: 40px;
+            font-weight: 700;
+            color: #fff;
+            margin: 0 0 24px 0;
+
+            .accent {
+                color: #FCE015;
+            }
+        }
+
+        .about-text {
+            font-size: 16px;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 300;
+            max-width: 700px;
+            margin: 0 auto 16px auto;
+
+            strong {
+                color: #FCE015;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .about-highlights {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+    }
+
+    .highlight-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 16px;
+        padding: 32px 24px;
+        text-align: center;
+        transition: border-color 0.3s, transform 0.3s;
+
+        &:hover {
+            border-color: rgba(252, 224, 21, 0.3);
+            transform: translateY(-4px);
+        }
+
+        .highlight-icon {
+            font-size: 32px;
+            display: block;
+            margin-bottom: 16px;
+        }
+
+        h4 {
+            color: #fff;
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0 0 8px 0;
+        }
+
+        p {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 14px;
+            font-weight: 300;
+            margin: 0;
+            line-height: 1.5;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .about-highlights {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 600px) {
+        padding: 60px 1.5rem;
+
+        .about-header h2 {
+            font-size: 28px;
+        }
+
+        .about-highlights {
+            grid-template-columns: 1fr;
+        }
+    }
+}

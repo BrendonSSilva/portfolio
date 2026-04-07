@@ -7,31 +7,31 @@ import { Link } from 'react-router-dom'
 
 const cards = [
     {
-        name: "Local Zoom",
+        name: "LocalZoom",
         img: '/imgs/localzoom1.svg',
-        description: [{ item: "Desenvolvimento Web" }, { item: "Designer" }, { item: "Social Media" }, { item: "12/23 - 04/24" }],
-        cargos: [{ cargo: "Dev Full-Stack" }, { cargo: "Social Media" }, { cargo: "Designer" }, { cargo: "Editor de Vídeos" }],
+        description: [{ item: "Plataforma SaaS" }, { item: "Node.js + Express + MongoDB" }, { item: "Agente IA WhatsApp" }, { item: "Abr 2024 — Presente" }],
+        cargos: [{ cargo: "Fundador" }, { cargo: "Dev Full-Stack" }],
         type: 1,
         link: 'https://localzoom.com.br',
         github: 'https://github.com/BrendonSSilva/Local-Zoom',
     },
     {
-        name: "Nullstack",
+        name: "AGEDES",
+        img: '/imgs/agedes.png',
+        description: [{ item: "8+ Sistemas Web" }, { item: "PHP + MySQL + Bootstrap 5" }, { item: "Nov 2022 — Fev 2025" }],
+        cargos: [{ cargo: "Dev Full-Stack" }, { cargo: "Designer" }],
+        type: 0,
+        link: 'https://www.agedes.com.br'
+    },
+    {
+        name: "Nullstack.js",
         img: '/imgs/nullstack.png',
-        description: [{ item: "Testes do Framework" }, { item: "Editor de Vídeos" }, { item: "Cria;áo de Artes Visuais" }, { item: "Social Media" },{ item: "03/23 - 10/23" }],
-        cargos: [{ cargo: "Dev Front-End" }, { cargo: "Designer" }, { cargo: "Social Media" }, { cargo: "Editor de Vídeos" }],
+        description: [{ item: "Contribuidor Open Source" }, { item: "Testes & Otimizações" }, { item: "Tradução PT-BR" }, { item: "Fev — Nov 2023" }],
+        cargos: [{ cargo: "Developer" }, { cargo: "Contributor" }],
         type: 1,
         github: 'https://github.com/nullstack',
         link: 'https://nullstack.app'
     },
-    {
-        name: "AGEDES",
-        img: '/imgs/agedes.png',
-        description: [{ item: "Desenvolvimento de Sites" }, { item: "Criação de Artes Visuais" },{ item: "08/22 - 02/23 | 05/24 - Atualmente" }],
-        cargos: [{ cargo: "Dev Front-End" }, { cargo: "Designer" }],
-        type: 0,
-        link: 'https://www.agedes.com.br'
-    }
 ];
 
 const cardVariants: Variants = {
@@ -49,14 +49,18 @@ const cardVariants: Variants = {
         }
     }
 };
-export const Jobs = () => {
 
+export const Jobs = () => {
     function scrollToTop() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     return (
-        <section className="page card-1-page">
+        <section className="page card-1-page" id="projetos">
+            <div className="jobs-header">
+                <span className="section-label">Projetos</span>
+                <h2>Trabalhos em Destaque</h2>
+            </div>
             <div className={`cards-link`}>
                 {cards.map((card) => (
                     <motion.div
@@ -107,8 +111,7 @@ export const Jobs = () => {
                     </motion.div>
                 ))}
             </div>
-            <Link to='/trabalhos' onClick={scrollToTop} className='btn-link'>Ver Mais!</Link>
+            <Link to='/trabalhos' onClick={scrollToTop} className='btn-link'>Ver Todos os Trabalhos</Link>
         </section>
     );
 };
-

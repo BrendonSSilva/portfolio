@@ -1,50 +1,59 @@
 import "./main.scss";
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const services = [
     {
-        img: '/imgs/www.png',
-        imgAlt: 'Websites, sistemas, landing pages',
-        service: 'Sites',
-        description: 'Criação de sites completos, responsivos e otimizados para SEO. Proporcionando uma presença online profissional e acessível em todos os dispositivos. Garantimos um design atrativo e funcional, aumentando a visibilidade e engajamento do seu negócio.'
-    }, {
-        img: '/imgs/designgrafico.png',
-        imgAlt: 'Photoshop, Figma, Canva',
-        service: 'Design Gráfico, UX/UI',
-        description: 'Desenvolvemos identidades visuais impactantes e interfaces intuitivas, melhorando a experiência do usuário e fortalecendo a sua marca. Nosso foco é criar designs esteticamente agradáveis que também sejam fáceis de usar.'
-    }, {
-        img: '/imgs/socialmedia.png',
-        imgAlt: 'Instagram, Facebook, Tiktok',
-        service: 'Social Media',
-        description: 'Gestão completa de redes sociais, incluindo criação de conteúdo, planejamento estratégico e análise de desempenho. Aumente seu alcance e engajamento com postagens relevantes e campanhas eficazes que convertem seguidores em clientes.'
-    }, {
-        img: '/imgs/capcut.png',
-        imgAlt: 'Capcut',
-        service: 'Editor de Vídeos',
-        description: 'Edição profissional de vídeos para promover sua marca, produtos ou serviços. Transformamos suas ideias em vídeos atraentes e de alta qualidade, perfeitos para redes sociais, websites e campanhas de marketing.'
+        icon: '{ }',
+        service: 'Desenvolvimento Web',
+        description: 'Plataformas web escaláveis, SPAs e sistemas completos com React.js, Node.js e MongoDB. Do wireframe ao deploy em produção.'
     },
-]
+    {
+        icon: '⚡',
+        service: 'APIs & Back-end',
+        description: 'APIs RESTful robustas com autenticação JWT, controle de permissões e integração com serviços externos. Node.js + Express.'
+    },
+    {
+        icon: '🎨',
+        service: 'Design & UI/UX',
+        description: 'Interfaces pixel-perfect a partir de protótipos Figma. Design responsivo mobile-first com foco em experiência do usuário.'
+    },
+    {
+        icon: '🤖',
+        service: 'IA & Automação',
+        description: 'Agentes autônomos, chatbots inteligentes e automações com Claude API, GPT-4, n8n e Evolution API para WhatsApp.'
+    },
+];
 
 export const Services = () => {
-
     return (
-        <>
-            <section className="services">
-                <div>
-                    <h1>Serviços</h1>
-                    <p>Conheça mais sobre meus serviços</p>
-                </div>
-                <div className="services-items">
-                    {services.map((item) => (
-                        <div>
-                            <img src={item.img} alt={item.imgAlt} />
-                            <h4>{item.service}</h4>
-                            <p>{item.description}</p>
-                        </div>
-                    ))}
-                </div>
-                <button className='button-default'><a href="https://www.linkedin.com/in/brendon-silva/"><img src="/icons/cta-icon.svg" alt='Contato' />Contato</a></button>
-            </section>
-        </>
+        <section className="services" id="servicos">
+            <motion.div
+                className="services-header"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+            >
+                <span className="section-label">Serviços</span>
+                <h2>O que eu faço</h2>
+            </motion.div>
+            <div className="services-grid">
+                {services.map((item, index) => (
+                    <motion.div
+                        key={item.service}
+                        className="service-card"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                    >
+                        <span className="service-icon">{item.icon}</span>
+                        <h4>{item.service}</h4>
+                        <p>{item.description}</p>
+                    </motion.div>
+                ))}
+            </div>
+        </section>
     );
 };

@@ -1,0 +1,208 @@
+.experience {
+    padding: 80px 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    .experience-header {
+        text-align: center;
+        margin-bottom: 60px;
+
+        h2 {
+            font-size: 40px;
+            font-weight: 700;
+            color: #fff;
+            margin: 0;
+        }
+    }
+
+    .timeline {
+        position: relative;
+    }
+
+    .timeline-item {
+        display: flex;
+        gap: 24px;
+        position: relative;
+        padding-bottom: 40px;
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+
+        &.current .timeline-content {
+            border-color: rgba(252, 224, 21, 0.2);
+            background: rgba(252, 224, 21, 0.03);
+        }
+    }
+
+    .timeline-marker {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-shrink: 0;
+        padding-top: 6px;
+
+        .marker-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #FCE015;
+            box-shadow: 0 0 12px rgba(252, 224, 21, 0.4);
+            flex-shrink: 0;
+        }
+
+        .marker-line {
+            width: 2px;
+            flex: 1;
+            background: linear-gradient(to bottom, rgba(252, 224, 21, 0.3), rgba(252, 224, 21, 0.05));
+            margin-top: 8px;
+        }
+    }
+
+    .current .marker-dot {
+        animation: glow 2s infinite;
+    }
+
+    @keyframes glow {
+        0%, 100% { box-shadow: 0 0 12px rgba(252, 224, 21, 0.4); }
+        50% { box-shadow: 0 0 20px rgba(252, 224, 21, 0.7); }
+    }
+
+    .timeline-content {
+        flex: 1;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 16px;
+        padding: 28px;
+        transition: border-color 0.3s;
+
+        &:hover {
+            border-color: rgba(252, 224, 21, 0.15);
+        }
+    }
+
+    .timeline-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 16px;
+        flex-wrap: wrap;
+        gap: 12px;
+
+        h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #fff;
+            margin: 0 0 4px 0;
+        }
+
+        .company {
+            margin: 0;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.5);
+
+            a {
+                color: #FCE015;
+                text-decoration: none;
+                transition: opacity 0.3s;
+
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+
+        .period {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.4);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            white-space: nowrap;
+
+            &.active {
+                color: #FCE015;
+            }
+
+            .active-dot {
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background: #28c840;
+                animation: pulse-dot 2s infinite;
+            }
+        }
+    }
+
+    @keyframes pulse-dot {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.4; }
+    }
+
+    ul {
+        padding: 0;
+        margin: 0 0 16px 0;
+        list-style: none;
+        background: transparent;
+
+        li {
+            position: relative;
+            padding-left: 16px;
+            font-size: 14px;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.65);
+            font-weight: 300;
+            margin-bottom: 8px;
+
+            &::before {
+                content: '▸';
+                position: absolute;
+                left: 0;
+                color: #FCE015;
+            }
+        }
+    }
+
+    .exp-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+
+        .tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            background: rgba(252, 224, 21, 0.08);
+            color: rgba(252, 224, 21, 0.8);
+            border: 1px solid rgba(252, 224, 21, 0.12);
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding: 60px 1.5rem;
+
+        .experience-header h2 {
+            font-size: 28px;
+        }
+
+        .timeline-top {
+            flex-direction: column;
+        }
+
+        .timeline-content {
+            padding: 20px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .timeline-marker {
+            display: none;
+        }
+
+        .timeline-item {
+            gap: 0;
+        }
+    }
+}

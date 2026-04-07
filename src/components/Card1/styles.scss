@@ -3,8 +3,10 @@
   display: grid;
   place-items: center;
   color: #f7f7f7;
-  h1{
+
+  h1 {
     color: #FCE015;
+    font-size: 36px;
   }
 }
 
@@ -19,17 +21,15 @@ h4 {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
 
-  @media(max-width:1200px) {
+  @media(max-width: 1200px) {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  @media(max-width:940px) {
+  @media(max-width: 940px) {
     grid-template-columns: repeat(2, 1fr);
-
-
   }
 
-  @media(max-width:600px) {
+  @media(max-width: 600px) {
     grid-template-columns: repeat(1, 1fr);
   }
 
@@ -53,8 +53,8 @@ h4 {
   right: 0;
   bottom: 0;
   backface-visibility: hidden;
-  border: 1px solid #fff;
-  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
   padding: 20px;
   transition: 0.6s;
   cursor: pointer;
@@ -62,12 +62,19 @@ h4 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.card-1-page .card .front:hover {
+  border-color: rgba(252, 224, 21, 0.3);
 }
 
 .card-1-page .card .back {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background: rgba(10, 12, 21, 0.95);
+  border-color: rgba(252, 224, 21, 0.15);
 
   header {
     width: 100%;
@@ -95,14 +102,20 @@ h4 {
     align-items: center;
     flex-direction: column;
     padding: 0;
+    margin: 0;
     background-color: transparent;
+    list-style: none;
+    gap: 4px;
 
     li {
       color: #fff;
       text-align: center !important;
-      font-size: 14px;
-      margin: -8px 0;
+      font-size: 13px;
+      margin: 2px 0;
+      padding: 0;
       font-weight: 300;
+      line-height: 1.4;
+      list-style: none;
     }
   }
 
@@ -113,13 +126,28 @@ h4 {
     align-items: center;
     margin-top: 0px;
 
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.3s;
+
+      &:hover {
+        border-color: rgba(252, 224, 21, 0.3);
+      }
+    }
+
     img {
-      margin-top: 10px;
-      width: 26px;
+      margin-top: 0;
+      width: 20px;
     }
   }
 }
-
 
 .card-1-page .card .front h3,
 .card-1-page .card .front h4 {
@@ -127,6 +155,11 @@ h4 {
   margin: 10px 0;
 }
 
+.card-1-page .card .front h4 {
+  font-size: 12px;
+  color: rgba(252, 224, 21, 0.6);
+  font-family: 'JetBrains Mono', monospace;
+}
 
 .card-1-page .back {
   transform: rotateY(180deg);

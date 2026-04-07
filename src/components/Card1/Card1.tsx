@@ -6,44 +6,44 @@ import { Link } from 'react-router-dom';
 
 const cards = [
     {
-        name: "Local Zoom",
+        name: "LocalZoom",
         img: '/imgs/localzoom1.svg',
-        description: [{ item: "Desenvolvimento Web" }, { item: "Designer" }, { item: "Social Media" }, { item: "12/23 - 04/24" }],
-        cargos: [{ cargo: "Dev Full-Stack" }, { cargo: "Social Media" }, { cargo: "Designer" }, { cargo: "Editor de Vídeos" }],
+        description: [{ item: "Plataforma SaaS Freemium" }, { item: "Node.js + Express + MongoDB" }, { item: "Agente IA WhatsApp" }, { item: "Abr 2024 — Presente" }],
+        cargos: [{ cargo: "Fundador" }, { cargo: "Dev Full-Stack" }],
         type: 1,
         link: 'https://localzoom.com.br',
         github: 'https://github.com/BrendonSSilva/Local-Zoom',
     },
     {
-        name: "Nullstack",
-        img: '/imgs/nullstack.png',
-        description: [{ item: "Testes do Framework" }, { item: "Editor de Vídeos" }, { item: "Cria;áo de Artes Visuais" }, { item: "Social Media" }, { item: "03/23 - 10/23" }],
-        cargos: [{ cargo: "Dev Front-End" }, { cargo: "Designer" }, { cargo: "Social Media" }, { cargo: "Editor de Vídeos" }],
-        type: 1,
-        github: 'https://github.com/nullstack',
-        link: 'https://nullstack.app'
-    },
-    {
         name: "AGEDES",
         img: '/imgs/agedes.png',
-        description: [{ item: "Desenvolvimento de Sites" }, { item: "Criação de Artes Visuais" }, { item: "08/22 - 02/23" }],
-        cargos: [{ cargo: "Dev Front-End" }, { cargo: "Designer" }],
+        description: [{ item: "8+ Sistemas Web End-to-End" }, { item: "PHP + MySQL + Bootstrap 5" }, { item: "Nov 2022 — Fev 2025" }],
+        cargos: [{ cargo: "Dev Full-Stack" }, { cargo: "Designer" }],
         type: 0,
         link: 'https://www.agedes.com.br'
     },
     {
         name: "SLS TEM",
         img: '/imgs/slstem.png',
-        description: [{ item: "Desenvolvedor Front-End" }, { item: "Designer" }, { item: "Editor de Vídeos" }, { item: "Social Media" }, { item: "09/23 - 12/23" }],
-        cargos: [{ cargo: "Dev Front-End" }, { cargo: "Designer" }, { cargo: "Editor de Vídeos" }, { cargo: "Social Media" }],
+        description: [{ item: "SPA React.js + Nullstack.js" }, { item: "Protótipo que evoluiu ao LocalZoom" }, { item: "Nov 2023 — Mar 2024" }],
+        cargos: [{ cargo: "Dev Full-Stack" }, { cargo: "Designer" }],
         type: 0,
         github: 'https://github.com/BrendonSSilva/sls-tem',
         link: 'https://www.slstem.com.br'
     },
     {
+        name: "Nullstack.js",
+        img: '/imgs/nullstack.png',
+        description: [{ item: "Contribuidor Open Source" }, { item: "Testes & Otimizações" }, { item: "Tradução PT-BR Oficial" }, { item: "Fev — Nov 2023" }],
+        cargos: [{ cargo: "Developer" }, { cargo: "Contributor" }],
+        type: 1,
+        github: 'https://github.com/nullstack',
+        link: 'https://nullstack.app'
+    },
+    {
         name: "SulLed",
         img: '/imgs/sulled.png',
-        description: [{ item: "Criação deCronogramas/Temas de publicações" }, { item: "Editor de Vídeos" }, { item: "Social Media" }, { item: "Designer" }, { item: "08/23 - 11/23" }],
+        description: [{ item: "Social Media & Design" }, { item: "Cronogramas de Publicações" }, { item: "Ago — Nov 2023" }],
         cargos: [{ cargo: "Social Media" }, { cargo: "Designer" }],
         type: 0,
         link: 'https://www.instagram.com/suledsls/'
@@ -51,14 +51,15 @@ const cards = [
     {
         name: "Oficina da Barba",
         img: '/imgs/oficinadabarba.png',
-        description: [{ item: "Criação de Artes Visuais" }, { item: "Editor de Vídeos" }, { item: "Social Media" }, { item: "2023/24" }],
-        cargos: [{ cargo: "Editor de Vídeos" }, { cargo: "Designer" }],
+        description: [{ item: "Artes Visuais & Vídeos" }, { item: "Social Media" }, { item: "2023/24" }],
+        cargos: [{ cargo: "Designer" }, { cargo: "Editor de Vídeos" }],
         type: 0,
         link: 'https://www.instagram.com/oficinadabarbaa/'
-    }, {
+    },
+    {
         name: "Kael Barber",
         img: '/imgs/kael.png',
-        description: [{ item: "Criação de Artes Visuais" }, { item: "Editor de Vídeos" }, { item: "Social Media" }, { item: "2022" }],
+        description: [{ item: "Artes Visuais & Vídeos" }, { item: "Social Media" }, { item: "2022" }],
         cargos: [{ cargo: "Social Media" }, { cargo: "Designer" }],
         type: 0,
         link: 'https://www.instagram.com/kaelbarberstudio/'
@@ -66,7 +67,7 @@ const cards = [
     {
         name: "Dexter Barbearia",
         img: '/imgs/dexter.png',
-        description: [{ item: "Criação de Artes Visuais" }, { item: "Editor de Vídeos" }, { item: "Social Media" }, { item: "2022" }],
+        description: [{ item: "Artes Visuais & Vídeos" }, { item: "Social Media" }, { item: "2022" }],
         cargos: [{ cargo: "Social Media" }, { cargo: "Designer" }],
         type: 0,
         link: 'https://www.instagram.com/dexterbarbeiro/'
@@ -78,31 +79,35 @@ const cards = [
         cargos: [{ cargo: "Designer" }],
         type: 0,
         link: ''
-    }, {
+    },
+    {
         name: "Conveniência Central",
         img: '/imgs/convcentral.png',
-        description: [{ item: "Criação de Artes Visuais" }, { item: "2024" }],
+        description: [{ item: "Artes Visuais" }, { item: "2024" }],
         cargos: [{ cargo: "Designer" }],
         type: 0,
         link: 'https://www.instagram.com/p/C4bcBLSrHHy/'
-    }, {
+    },
+    {
         name: "Fabrício Radmann Eventos",
         img: '/imgs/radmanneventos.jpg',
-        description: [{ item: "Criação de Artes Visuais" }, { item: "2024" }],
+        description: [{ item: "Artes Visuais" }, { item: "2024" }],
         cargos: [{ cargo: "Designer" }],
         type: 0,
         link: 'https://www.instagram.com/buffetfabricioradmann/'
-    }, {
+    },
+    {
         name: "Restaurante Estância 21",
         img: '/imgs/estancia.png',
-        description: [{ item: "Criação de Artes Visuais" }, { item: "2024" }],
+        description: [{ item: "Artes Visuais" }, { item: "2024" }],
         cargos: [{ cargo: "Designer" }],
         type: 0,
         link: 'https://www.instagram.com/restauranteestancia21/'
-    }, {
+    },
+    {
         name: "Klar Odontologia",
         img: '/imgs/klar.png',
-        description: [{ item: "Criação de Artes Visuais" }, { item: "2024" }],
+        description: [{ item: "Artes Visuais" }, { item: "2024" }],
         cargos: [{ cargo: "Designer" }],
         type: 0,
         link: 'https://www.instagram.com/klarodontologia/'
@@ -110,7 +115,7 @@ const cards = [
     {
         name: "Sal, Sabor & Brasa",
         img: '/imgs/salsabor.png',
-        description: [{ item: "Criação de Artes Visuais" }, { item: "Editor de Vídeos" }, { item: "Social Media" }, { item: "2022" }],
+        description: [{ item: "Artes Visuais & Vídeos" }, { item: "Social Media" }, { item: "2022" }],
         cargos: [{ cargo: "Social Media" }, { cargo: "Designer" }],
         type: 0,
         link: ''
@@ -126,7 +131,7 @@ const cards = [
     {
         name: "Clasberg",
         img: '/imgs/clasberg.png',
-        description: [{ item: "Criação de Artes Visuais" }, { item: "2022" }],
+        description: [{ item: "Artes Visuais" }, { item: "2022" }],
         cargos: [{ cargo: "Designer" }],
         type: 0,
         link: ''
@@ -135,14 +140,15 @@ const cards = [
         name: "Workouts",
         img: '/imgs/gym.svg',
         cargos: [{ cargo: "Projeto de Estudo" }],
-        description: [{ item: "NodeJs" }, { item: "MongoDB" }, { item: "ReactJs + Vite" }, { item: "TypeScript" }, { item: "12/23 - 01/23" }],
+        description: [{ item: "NodeJs + MongoDB" }, { item: "ReactJs + Vite" }, { item: "TypeScript" }],
         type: 1,
         github: 'https://github.com/BrendonSSilva/gym-workouts',
         link: ''
-    }, {
+    },
+    {
         name: "Consumo de API",
         img: '/imgs/rickapi.svg',
-        description: [{ item: "ReactJs" }, { item: "TypeScript" }, { item: "Styled-Components" }, { item: "01/24 - 01/24" }],
+        description: [{ item: "ReactJs + TypeScript" }, { item: "Styled-Components" }, { item: "Rick & Morty API" }],
         cargos: [{ cargo: "Projeto de Estudo" }],
         type: 1,
         github: 'https://github.com/BrendonSSilva/API-RickAndMorty',
@@ -151,7 +157,7 @@ const cards = [
     {
         name: "Meu Portfolio",
         img: '/imgs/meuportfolio.png',
-        description: [{ item: "ReactJs" }, { item: "TypeScript" }, { item: "Design" }, { item: "Sass" }, { item: "Framer Motion" }, { item: "2024" }],
+        description: [{ item: "React.js + TypeScript" }, { item: "Sass + Framer Motion" }, { item: "2024" }],
         cargos: [{ cargo: "Portfolio" }],
         type: 1,
         github: 'https://github.com/BrendonSSilva/portfolio'
@@ -173,6 +179,7 @@ const cardVariants: Variants = {
         }
     }
 };
+
 export const Card1 = () => {
     return (
         <section className="page card-1-page">

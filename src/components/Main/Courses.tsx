@@ -1,41 +1,92 @@
 import "./main.scss";
 import React from 'react';
+import { motion } from 'framer-motion';
 
-export const Courses = () => {
-
+export const Education = () => {
     return (
-        <>
-            <hr />
-            <section className="courses">
-                <div className="courses-left">
-                    <div className="course-item obc">
-                        <img src="/imgs/obc.webp" alt="OneBitCode" />
-                        <div>
-                            <h3>OneBitCode</h3>
-                            <p>Desenvolvimento Back-End | 11/23 - 01/24 - <a href="https://cursos.onebitcode.com/cert/99J0SGRB5rHw8qc" target="_blank">Exibir Credencial</a></p>
-                            <h3>OneBitCode</h3>
-                            <p>Banco de Dados | 12/23 - 01/24 - <a href="https://cursos.onebitcode.com/cert/NlXmaT6w3bjf3n3" target="_blank">Exibir Credencial</a></p>
-                            <h3>OneBitCode</h3>
-                            <p>ReactJs | 12/23 - 01/24 - <a href="https://cursos.onebitcode.com/cert/A5e0phA0aZxTzzg" target="_blank">Exibir Credencial</a></p>
-                            <h3>OneBitCode</h3>
-                            <p>NextJs | 12/23 - 01/24 - <a href="https://cursos.onebitcode.com/cert/ekbRuDjy8YUDDli" target="_blank">Exibir Credencial</a></p>
-                        </div>
+        <section className="education" id="formacao">
+            <motion.div
+                className="education-header"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+            >
+                <span className="section-label">Formação</span>
+                <h2>Educação & Certificações</h2>
+            </motion.div>
+
+            <div className="education-content">
+                <motion.div
+                    className="degree-card"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5 }}
+                >
+                    <div className="degree-icon">🎓</div>
+                    <div className="degree-info">
+                        <h3>Bacharelado em Engenharia de Software</h3>
+                        <p className="degree-institution">UNINTER — Centro Universitário Internacional</p>
+                        <span className="degree-status">Em andamento</span>
                     </div>
-                    <div className="course-item b7web">
-                        <img src="/imgs/b7web.webp" alt="B7Web" />
-                        <div>
-                            <h3>B7Web</h3>
-                            <p>JavaScript | 01/22 - 05/22 - <a href="https://alunos.b7web.com.br/media/certificates/certificado_4512946.jpg" target="_blank">Exibir Credencial</a></p>
-                        </div>
+                </motion.div>
+
+                <div className="certifications">
+                    <h3 className="cert-title">Certificações</h3>
+                    <div className="cert-grid">
+                        <motion.div
+                            className="cert-group"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: 0.1 }}
+                        >
+                            <div className="cert-provider">
+                                <img src="/imgs/obc.webp" alt="OneBitCode" />
+                                <span>OneBitCode</span>
+                            </div>
+                            <div className="cert-list">
+                                <div className="cert-item">
+                                    <span className="cert-name">Node.js Avançado & Back-End com Express</span>
+                                    <a href="https://cursos.onebitcode.com/cert/99J0SGRB5rHw8qc" target="_blank" rel="noopener noreferrer">Credencial</a>
+                                </div>
+                                <div className="cert-item">
+                                    <span className="cert-name">MongoDB & Banco de Dados</span>
+                                    <a href="https://cursos.onebitcode.com/cert/NlXmaT6w3bjf3n3" target="_blank" rel="noopener noreferrer">Credencial</a>
+                                </div>
+                                <div className="cert-item">
+                                    <span className="cert-name">React.js</span>
+                                    <a href="https://cursos.onebitcode.com/cert/A5e0phA0aZxTzzg" target="_blank" rel="noopener noreferrer">Credencial</a>
+                                </div>
+                                <div className="cert-item">
+                                    <span className="cert-name">Next.js</span>
+                                    <a href="https://cursos.onebitcode.com/cert/ekbRuDjy8YUDDli" target="_blank" rel="noopener noreferrer">Credencial</a>
+                                </div>
+                            </div>
+                        </motion.div>
+
+                        <motion.div
+                            className="cert-group"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: 0.2 }}
+                        >
+                            <div className="cert-provider">
+                                <img src="/imgs/b7web.webp" alt="B7Web" />
+                                <span>B7Web</span>
+                            </div>
+                            <div className="cert-list">
+                                <div className="cert-item">
+                                    <span className="cert-name">JavaScript, HTML5, CSS3, Bootstrap</span>
+                                    <a href="https://alunos.b7web.com.br/media/certificates/certificado_4512946.jpg" target="_blank" rel="noopener noreferrer">Credencial</a>
+                                </div>
+                            </div>
+                        </motion.div>
                     </div>
                 </div>
-                <div className="courses-right">
-                    <h1>Formação e Cursos</h1>
-                    <p>Optei por cursos profissionalizantes e projetos próprios, seguindo conselhos valiosos de profissionais experientes e grandes empresas. Essa abordagem prática e focada me permitiu adquirir habilidades relevantes e aplicáveis no mercado, aprimorando continuamente meu conhecimento e competências.</p>
-                    <img src="/imgs/joaofrango.webp" alt="Formação" />
-                </div>
-            </section>
-            <hr />
-        </>
+            </div>
+        </section>
     );
 };

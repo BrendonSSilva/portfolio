@@ -1,16 +1,30 @@
 .btn-link {
-    padding: 15px;
+    padding: 15px 32px;
     border-radius: 10px;
-    border: 1px solid #FCE015;
-    font-size: 16px;
+    border: 1px solid rgba(252, 224, 21, 0.4);
+    font-size: 15px;
+    font-weight: 600;
     background-color: transparent;
     text-decoration: none;
     color: #FCE015;
+    transition: all 0.3s ease;
 
     &:hover {
-        border: 1px solid #fff;
+        border-color: #FCE015;
+        background: rgba(252, 224, 21, 0.05);
+        transform: translateY(-2px);
+    }
+}
+
+.jobs-header {
+    text-align: center;
+    margin-bottom: 40px;
+
+    h2 {
+        font-size: 40px;
+        font-weight: 700;
         color: #fff;
-        transition: ease-in-out 0.3s;
+        margin: 0;
     }
 }
 
@@ -18,7 +32,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; 
+    flex-direction: column;
+    padding: 80px 2rem;
 }
 
 .cards-link {
@@ -26,7 +41,8 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 20px; 
+    gap: 24px;
+    margin-bottom: 40px;
 }
 
 .card-container {

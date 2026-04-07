@@ -3,26 +3,30 @@ import { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Navbar } from './components/Navbar/Navbar';
 import { Hero } from './components/Hero/Hero';
+import { About } from './components/About/About';
+import { Experience } from './components/Experience/Experience';
 import { Services } from './components/Main/Services';
 import { Skills } from './components/Main/Skills';
 import { Card1 } from './components/Card1/Card1';
-import { Courses } from './components/Main/Courses';
+import { Education } from './components/Main/Courses';
 import { Footer } from './components/Footer/Footer';
 import { Jobs } from './components/Jobs/Jobs';
 
 const Home = () => {
   useEffect(() => {
-    document.title = 'Brendon Silva - Desenvolvedor Full-Stack e Designer';
+    document.title = 'Brendon Silva — Full-Stack Developer & Software Engineering Student';
   }, []);
 
   return (
     <>
       <Navbar />
       <Hero />
+      <About />
+      <Experience />
       <Services />
       <Skills />
       <Jobs />
-      <Courses />
+      <Education />
       <Footer />
     </>
   );
@@ -30,10 +34,10 @@ const Home = () => {
 
 const Trabalhos = () => {
   useEffect(() => {
-    document.title = 'Trabalhos - Brendon Silva';
+    document.title = 'Trabalhos — Brendon Silva';
   }, []);
 
-  return <Card1 route='' />;
+  return <Card1 />;
 };
 
 const App = () => {
