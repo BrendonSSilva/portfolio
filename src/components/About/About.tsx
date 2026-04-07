@@ -1,15 +1,11 @@
 import "./about.scss";
 import React from 'react';
 import { motion } from 'framer-motion';
-
-const highlights = [
-    { icon: "🎓", title: "Engenharia de Software", desc: "Bacharelado em andamento — UNINTER" },
-    { icon: "🚀", title: "Fundador do LocalZoom", desc: "SaaS em produção com receita recorrente" },
-    { icon: "🤖", title: "IA em Produção", desc: "Claude API, GPT-4, agentes autônomos" },
-    { icon: "🌍", title: "Open Source", desc: "Contribuidor ativo — Nullstack.js" },
-];
+import { useLanguage } from '../../i18n/LanguageContext';
 
 export const About = () => {
+    const { t } = useLanguage();
+
     return (
         <section className="about" id="sobre">
             <motion.div
@@ -19,21 +15,19 @@ export const About = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
             >
-                <span className="section-label">Sobre Mim</span>
-                <h2>Engenheiro de Software <span className="accent">&</span> Desenvolvedor Full-Stack</h2>
+                <span className="section-label">{t.about.label}</span>
+                <h2>{t.about.headingPrefix} <span className="accent">&</span> {t.about.headingSuffix}</h2>
                 <p className="about-text">
-                    Desenvolvedor Full-Stack com mais de 3 anos construindo plataformas web escaláveis,
-                    APIs RESTful e interfaces responsivas. Atualmente cursando <strong>Engenharia de Software na UNINTER</strong>,
-                    combinando fundamentos acadêmicos com experiência prática em produção.
+                    {t.about.text1Prefix}{' '}
+                    <strong>{t.about.text1Highlight}</strong>
+                    {t.about.text1Suffix}
                 </p>
                 <p className="about-text">
-                    Integro IA (Claude API, GPT-4, Gemini, DeepSeek) em fluxos reais de produto —
-                    entregando agentes autônomos, não apenas usando IA como ferramenta de texto.
-                    Ownership completo: do Figma ao deploy.
+                    {t.about.text2}
                 </p>
             </motion.div>
             <div className="about-highlights">
-                {highlights.map((item, index) => (
+                {t.about.highlights.map((item, index) => (
                     <motion.div
                         key={item.title}
                         className="highlight-card"

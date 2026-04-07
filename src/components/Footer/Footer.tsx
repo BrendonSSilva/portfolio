@@ -1,27 +1,30 @@
 import "./styles.scss";
 import React from 'react';
+import { useLanguage } from '../../i18n/LanguageContext';
 
 export const Footer = () => {
+    const { t } = useLanguage();
+
     return (
         <footer>
             <div className="footer-content">
                 <div className="footer-main">
                     <div className="footer-brand">
                         <h3>Brendon <span>Silva</span></h3>
-                        <p>Full-Stack Developer & Estudante de Engenharia de Software</p>
+                        <p>{t.footer.tagline}</p>
                     </div>
                     <div className="footer-links">
                         <div className="footer-col">
-                            <h4>Links</h4>
-                            <a href="#sobre">Sobre</a>
-                            <a href="#experiencia">Experiência</a>
-                            <a href="#projetos">Projetos</a>
-                            <a href="#formacao">Formação</a>
+                            <h4>{t.footer.linksTitle}</h4>
+                            <a href="#sobre">{t.footer.linkAbout}</a>
+                            <a href="#experiencia">{t.footer.linkExperience}</a>
+                            <a href="#projetos">{t.footer.linkProjects}</a>
+                            <a href="#formacao">{t.footer.linkEducation}</a>
                         </div>
                         <div className="footer-col">
-                            <h4>Idiomas</h4>
-                            <p><strong>Inglês</strong> — Fluente (técnico & conversação)</p>
-                            <p><strong>Português</strong> — Nativo</p>
+                            <h4>{t.footer.languagesTitle}</h4>
+                            <p><strong>{t.footer.english}</strong> — {t.footer.englishLevel}</p>
+                            <p><strong>{t.footer.portuguese}</strong> — {t.footer.portugueseLevel}</p>
                         </div>
                     </div>
                 </div>
@@ -33,7 +36,7 @@ export const Footer = () => {
                     <a href="https://www.instagram.com/brendonsilva03" target="_blank" rel="noopener noreferrer"><img src='/icons/Instagram.svg' alt='Instagram' /></a>
                 </div>
                 <div className="footer-bottom">
-                    <p>Brendon Silva &copy; 2026 — Feito com React.js</p>
+                    <p>{t.footer.copyright}</p>
                 </div>
             </div>
         </footer>

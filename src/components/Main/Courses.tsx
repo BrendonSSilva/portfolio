@@ -1,8 +1,11 @@
 import "./main.scss";
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '../../i18n/LanguageContext';
 
 export const Education = () => {
+    const { t } = useLanguage();
+
     return (
         <section className="education" id="formacao">
             <motion.div
@@ -12,8 +15,8 @@ export const Education = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
             >
-                <span className="section-label">Formação</span>
-                <h2>Educação & Certificações</h2>
+                <span className="section-label">{t.education.label}</span>
+                <h2>{t.education.heading}</h2>
             </motion.div>
 
             <div className="education-content">
@@ -26,14 +29,14 @@ export const Education = () => {
                 >
                     <div className="degree-icon">🎓</div>
                     <div className="degree-info">
-                        <h3>Bacharelado em Engenharia de Software</h3>
-                        <p className="degree-institution">UNINTER — Centro Universitário Internacional</p>
-                        <span className="degree-status">Em andamento</span>
+                        <h3>{t.education.degree}</h3>
+                        <p className="degree-institution">{t.education.institution}</p>
+                        <span className="degree-status">{t.education.status}</span>
                     </div>
                 </motion.div>
 
                 <div className="certifications">
-                    <h3 className="cert-title">Certificações</h3>
+                    <h3 className="cert-title">{t.education.certTitle}</h3>
                     <div className="cert-grid">
                         <motion.div
                             className="cert-group"
@@ -48,16 +51,16 @@ export const Education = () => {
                             </div>
                             <div className="cert-list">
                                 <div className="cert-item">
-                                    <span className="cert-name">Node.js Avançado & Back-End com Express</span>
+                                    <span className="cert-name">{t.education.certNodejs}</span>
                                 </div>
                                 <div className="cert-item">
-                                    <span className="cert-name">MongoDB & Banco de Dados</span>
+                                    <span className="cert-name">{t.education.certMongodb}</span>
                                 </div>
                                 <div className="cert-item">
-                                    <span className="cert-name">React.js</span>
+                                    <span className="cert-name">{t.education.certReact}</span>
                                 </div>
                                 <div className="cert-item">
-                                    <span className="cert-name">Next.js</span>
+                                    <span className="cert-name">{t.education.certNext}</span>
                                 </div>
                             </div>
                         </motion.div>
@@ -75,7 +78,7 @@ export const Education = () => {
                             </div>
                             <div className="cert-list">
                                 <div className="cert-item">
-                                    <span className="cert-name">JavaScript, HTML5, CSS3, Bootstrap</span>
+                                    <span className="cert-name">{t.education.certJs}</span>
                                 </div>
                             </div>
                         </motion.div>

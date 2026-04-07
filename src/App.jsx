@@ -1,6 +1,8 @@
 import './App.css'
 import { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { LanguageProvider, useLanguage } from './i18n/LanguageContext';
+import { LanguageToggle } from './components/LanguageToggle/LanguageToggle';
 import { Navbar } from './components/Navbar/Navbar';
 import { Hero } from './components/Hero/Hero';
 import { About } from './components/About/About';
@@ -13,12 +15,15 @@ import { Footer } from './components/Footer/Footer';
 import { Jobs } from './components/Jobs/Jobs';
 
 const Home = () => {
+  const { t } = useLanguage();
+
   useEffect(() => {
-    document.title = 'Brendon Silva — Full-Stack Developer & Software Engineering Student';
-  }, []);
+    document.title = t.app.homeTitle;
+  }, [t]);
 
   return (
     <>
+      <LanguageToggle />
       <Navbar />
       <Hero />
       <About />
@@ -33,21 +38,30 @@ const Home = () => {
 };
 
 const Trabalhos = () => {
-  useEffect(() => {
-    document.title = 'Trabalhos — Brendon Silva';
-  }, []);
+  const { t } = useLanguage();
 
-  return <Card1 />;
+  useEffect(() => {
+    document.title = t.app.workTitle;
+  }, [t]);
+
+  return (
+    <>
+      <LanguageToggle />
+      <Card1 />
+    </>
+  );
 };
 
 const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/trabalhos" element={<Trabalhos />} />
-      </Routes>
-    </Router>
+    <LanguageProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/trabalhos" element={<Trabalhos />} />
+        </Routes>
+      </Router>
+    </LanguageProvider>
   );
 };
 
