@@ -49,19 +49,15 @@ export const Education = () => {
                             <div className="cert-list">
                                 <div className="cert-item">
                                     <span className="cert-name">Node.js Avançado & Back-End com Express</span>
-                                    <a href="https://cursos.onebitcode.com/cert/99J0SGRB5rHw8qc" target="_blank" rel="noopener noreferrer">Credencial</a>
                                 </div>
                                 <div className="cert-item">
                                     <span className="cert-name">MongoDB & Banco de Dados</span>
-                                    <a href="https://cursos.onebitcode.com/cert/NlXmaT6w3bjf3n3" target="_blank" rel="noopener noreferrer">Credencial</a>
                                 </div>
                                 <div className="cert-item">
                                     <span className="cert-name">React.js</span>
-                                    <a href="https://cursos.onebitcode.com/cert/A5e0phA0aZxTzzg" target="_blank" rel="noopener noreferrer">Credencial</a>
                                 </div>
                                 <div className="cert-item">
                                     <span className="cert-name">Next.js</span>
-                                    <a href="https://cursos.onebitcode.com/cert/ekbRuDjy8YUDDli" target="_blank" rel="noopener noreferrer">Credencial</a>
                                 </div>
                             </div>
                         </motion.div>
@@ -80,7 +76,6 @@ export const Education = () => {
                             <div className="cert-list">
                                 <div className="cert-item">
                                     <span className="cert-name">JavaScript, HTML5, CSS3, Bootstrap</span>
-                                    <a href="https://alunos.b7web.com.br/media/certificates/certificado_4512946.jpg" target="_blank" rel="noopener noreferrer">Credencial</a>
                                 </div>
                             </div>
                         </motion.div>
