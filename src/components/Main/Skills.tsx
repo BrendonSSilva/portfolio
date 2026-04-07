@@ -1,10 +1,11 @@
 import "./main.scss";
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '../../i18n/LanguageContext';
 
 const skillCategories = [
     {
-        title: "Front-end",
+        titleKey: "categoryFrontend" as const,
         skills: [
             { path: '/icons/reactjs.svg', name: 'React.js' },
             { path: '/icons/js.svg', name: 'JavaScript' },
@@ -16,7 +17,7 @@ const skillCategories = [
         ]
     },
     {
-        title: "Back-end & Database",
+        titleKey: "categoryBackend" as const,
         skills: [
             { path: '/icons/nodejs.svg', name: 'Node.js' },
             { path: '/icons/mongodb.svg', name: 'MongoDB' },
@@ -26,7 +27,7 @@ const skillCategories = [
         ]
     },
     {
-        title: "Ferramentas & Deploy",
+        titleKey: "categoryTools" as const,
         skills: [
             { path: '/icons/git.svg', name: 'Git/GitHub' },
             { path: '/icons/vscode.svg', name: 'VS Code' },
@@ -35,7 +36,11 @@ const skillCategories = [
     },
 ];
 
+const aiTags = ["Claude API", "Claude Code", "GPT-4", "Gemini", "DeepSeek", "n8n", "Evolution API"];
+
 export const Skills = () => {
+    const { t } = useLanguage();
+
     return (
         <section className="skills-section" id="skills">
             <motion.div
@@ -45,20 +50,20 @@ export const Skills = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
             >
-                <span className="section-label">Skills</span>
-                <h2>Tecnologias & Ferramentas</h2>
+                <span className="section-label">{t.skills.label}</span>
+                <h2>{t.skills.heading}</h2>
             </motion.div>
             <div className="skills-categories">
                 {skillCategories.map((category, catIndex) => (
                     <motion.div
-                        key={category.title}
+                        key={category.titleKey}
                         className="skill-category"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: catIndex * 0.1 }}
                     >
-                        <h3>{category.title}</h3>
+                        <h3>{t.skills[category.titleKey]}</h3>
                         <div className="skill-grid">
                             {category.skills.map((skill) => (
                                 <div key={skill.name} className="skill-item">
@@ -78,16 +83,12 @@ export const Skills = () => {
                 transition={{ duration: 0.6 }}
             >
                 <div className="ai-banner-content">
-                    <h3>IA & Automação em Produção</h3>
-                    <p>Claude API, ChatGPT/GPT-4, Gemini, DeepSeek — integração em produção, não apenas como ferramenta de produtividade.</p>
+                    <h3>{t.skills.aiBannerTitle}</h3>
+                    <p>{t.skills.aiBannerDesc}</p>
                     <div className="ai-tags">
-                        <span>Claude API</span>
-                        <span>Claude Code</span>
-                        <span>GPT-4</span>
-                        <span>Gemini</span>
-                        <span>DeepSeek</span>
-                        <span>n8n</span>
-                        <span>Evolution API</span>
+                        {aiTags.map((tag) => (
+                            <span key={tag}>{tag}</span>
+                        ))}
                     </div>
                 </div>
             </motion.div>

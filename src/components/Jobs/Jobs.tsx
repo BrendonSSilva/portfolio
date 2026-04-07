@@ -4,30 +4,28 @@ import "./styles.scss";
 import "../Card1/styles.scss";
 import { motion, Variants } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import { useLanguage } from '../../i18n/LanguageContext';
 
-const cards = [
+const cardsStructure = [
     {
+        key: "localzoom" as const,
         name: "LocalZoom",
         img: '/imgs/localzoom1.svg',
-        description: [{ item: "Plataforma SaaS" }, { item: "Node.js + Express + MongoDB" }, { item: "Agente IA WhatsApp" }, { item: "Abr 2024 — Presente" }],
-        cargos: [{ cargo: "Fundador" }, { cargo: "Dev Full-Stack" }],
         type: 1,
         link: 'https://localzoom.com.br',
         github: 'https://github.com/BrendonSSilva/Local-Zoom',
     },
     {
+        key: "agedes" as const,
         name: "AGEDES",
         img: '/imgs/agedes.png',
-        description: [{ item: "8+ Sistemas Web" }, { item: "PHP + MySQL + Bootstrap 5" }, { item: "Nov 2022 — Fev 2025" }],
-        cargos: [{ cargo: "Dev Full-Stack" }, { cargo: "Designer" }],
         type: 0,
         link: 'https://www.agedes.com.br'
     },
     {
+        key: "nullstack" as const,
         name: "Nullstack.js",
         img: '/imgs/nullstack.png',
-        description: [{ item: "Contribuidor Open Source" }, { item: "Testes & Otimizações" }, { item: "Tradução PT-BR" }, { item: "Fev — Nov 2023" }],
-        cargos: [{ cargo: "Developer" }, { cargo: "Contributor" }],
         type: 1,
         github: 'https://github.com/nullstack',
         link: 'https://nullstack.app'
@@ -51,6 +49,8 @@ const cardVariants: Variants = {
 };
 
 export const Jobs = () => {
+    const { t } = useLanguage();
+
     function scrollToTop() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
@@ -58,60 +58,63 @@ export const Jobs = () => {
     return (
         <section className="page card-1-page" id="projetos">
             <div className="jobs-header">
-                <span className="section-label">Projetos</span>
-                <h2>Trabalhos em Destaque</h2>
+                <span className="section-label">{t.jobs.label}</span>
+                <h2>{t.jobs.heading}</h2>
             </div>
             <div className={`cards-link`}>
-                {cards.map((card) => (
-                    <motion.div
-                        key={card.name}
-                        className="card-container"
-                        initial="offscreen"
-                        whileInView="onscreen"
-                    >
-                        <div className="splash" />
-                        <motion.div variants={cardVariants} className="card-wrapper">
-                            <label id={card.name}>
-                                <input type="checkbox" />
-                                <div className="card">
-                                    <div className="front">
-                                        <img src={card.img} alt={card.name} />
-                                        <h3>{card.name}</h3>
-                                        <h4>Detalhes</h4>
-                                    </div>
-                                    <div className="back">
-                                        <header>
-                                            <h2>{card.name}</h2>
-                                            <div>
-                                                {card.cargos.map((c, index) => (
-                                                    <p key={index}>{c.cargo}<br /></p>
+                {cardsStructure.map((card) => {
+                    const cardTranslation = t.cards[card.key];
+                    return (
+                        <motion.div
+                            key={card.name}
+                            className="card-container"
+                            initial="offscreen"
+                            whileInView="onscreen"
+                        >
+                            <div className="splash" />
+                            <motion.div variants={cardVariants} className="card-wrapper">
+                                <label id={card.name}>
+                                    <input type="checkbox" />
+                                    <div className="card">
+                                        <div className="front">
+                                            <img src={card.img} alt={card.name} />
+                                            <h3>{card.name}</h3>
+                                            <h4>{t.jobs.details}</h4>
+                                        </div>
+                                        <div className="back">
+                                            <header>
+                                                <h2>{card.name}</h2>
+                                                <div>
+                                                    {cardTranslation.cargos.map((cargo, index) => (
+                                                        <p key={index}>{cargo}<br /></p>
+                                                    ))}
+                                                </div>
+                                            </header>
+                                            <ul>
+                                                {cardTranslation.description.map((item, index) => (
+                                                    <li key={index}>{item}</li>
                                                 ))}
+                                            </ul>
+                                            <div className="links">
+                                                {card.type === 0 ? '' :
+                                                    <a href={card.github} target="_blank" rel="noopener noreferrer">
+                                                        <img src="/icons/github.svg" alt={t.jobs.githubAlt} />
+                                                    </a>}
+                                                {card.link &&
+                                                    <a href={card.link} target="_blank" rel="noopener noreferrer">
+                                                        <img src="/icons/link.svg" alt={t.jobs.linkAlt} />
+                                                    </a>
+                                                }
                                             </div>
-                                        </header>
-                                        <ul>
-                                            {card.description.map((c, index) => (
-                                                <li key={index}>{c.item}</li>
-                                            ))}
-                                        </ul>
-                                        <div className="links">
-                                            {card.type === 0 ? '' :
-                                                <a href={card.github} target="_blank" rel="noopener noreferrer">
-                                                    <img src="/icons/github.svg" alt="Código no Github" />
-                                                </a>}
-                                            {card.link &&
-                                                <a href={card.link} target="_blank" rel="noopener noreferrer">
-                                                    <img src="/icons/link.svg" alt="Ver Mais" />
-                                                </a>
-                                            }
                                         </div>
                                     </div>
-                                </div>
-                            </label>
+                                </label>
+                            </motion.div>
                         </motion.div>
-                    </motion.div>
-                ))}
+                    );
+                })}
             </div>
-            <Link to='/trabalhos' onClick={scrollToTop} className='btn-link'>Ver Todos os Trabalhos</Link>
+            <Link to='/trabalhos' onClick={scrollToTop} className='btn-link'>{t.jobs.viewAll}</Link>
         </section>
     );
 };
