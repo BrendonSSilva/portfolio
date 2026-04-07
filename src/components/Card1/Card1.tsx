@@ -41,6 +41,15 @@ const cards = [
         link: 'https://nullstack.app'
     },
     {
+        name: "Rei Arthur Esquadrias de Alumínio",
+        img: '/imgs/rei-arthur-logo.png',
+        description: [{ item: "Artes Visuais & Vídeos" }, { item: "Social Media" }, { item: "Novembro — Presente" }],
+        cargos: [{ cargo: "Social Media" }, { cargo: "Designer" }],
+        type: 0,
+        link: 'https://www.instagram.com/reiarthuresquadriasdealuminio/'
+    },
+    ,
+    {
         name: "SulLed",
         img: '/imgs/sulled.png',
         description: [{ item: "Social Media & Design" }, { item: "Cronogramas de Publicações" }, { item: "Ago — Nov 2023" }],
