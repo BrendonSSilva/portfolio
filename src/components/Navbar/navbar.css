@@ -1,6 +1,6 @@
 body {
   --background: #0a0c15;
-  --accent: #FCE015;
+  --accent: #fce015;
 }
 
 .menu {
@@ -26,7 +26,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   box-shadow: 0 4px 20px rgba(252, 224, 21, 0.2);
   transition: box-shadow 0.3s;
 }

@@ -1,5 +1,5 @@
 // themeContext adicionado para possíveis novas atualizações do portfolio
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState } from "react";
 
 interface ContextType {
   themeColor: string;
@@ -11,7 +11,7 @@ const CharContext = createContext<ContextType | undefined>(undefined);
 const useCharContext = () => {
   const context = useContext(CharContext);
   if (!context) {
-    throw new Error('useCharContext must be used within a CharProvider');
+    throw new Error("useCharContext must be used within a CharProvider");
   }
   return context;
 };
@@ -21,7 +21,7 @@ interface CharProviderProps {
 }
 
 const CharProvider: React.FC<CharProviderProps> = ({ children }) => {
-  const [themeColor, setThemeColor] = useState('');
+  const [themeColor, setThemeColor] = useState("");
 
   return (
     <CharContext.Provider value={{ themeColor, setThemeColor }}>

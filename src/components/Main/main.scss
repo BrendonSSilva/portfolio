@@ -1,375 +1,375 @@
 // services
 .services {
-    padding: 80px 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+  padding: 80px 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 
-    .services-header {
-        text-align: center;
-        margin-bottom: 60px;
+  .services-header {
+    text-align: center;
+    margin-bottom: 60px;
 
-        h2 {
-            font-size: 40px;
-            font-weight: 700;
-            color: #fff;
-            margin: 0;
-        }
+    h2 {
+      font-size: 40px;
+      font-weight: 700;
+      color: #fff;
+      margin: 0;
+    }
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  .service-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    padding: 32px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+
+    &:hover {
+      border-color: rgba(252, 224, 21, 0.2);
+      transform: translateY(-4px);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .service-icon {
+      font-size: 36px;
+      display: block;
+      margin-bottom: 16px;
+      font-family: "JetBrains Mono", monospace;
+    }
+
+    h4 {
+      color: #fce015;
+      font-size: 17px;
+      font-weight: 600;
+      margin: 0 0 12px 0;
+    }
+
+    p {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.7;
+      margin: 0;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .services-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    padding: 60px 1.5rem;
+
+    .services-header h2 {
+      font-size: 28px;
     }
 
     .services-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 24px;
+      grid-template-columns: 1fr;
     }
-
-    .service-card {
-        background: rgba(255, 255, 255, 0.02);
-        border: 1px solid rgba(255, 255, 255, 0.06);
-        border-radius: 16px;
-        padding: 32px 24px;
-        text-align: center;
-        transition: all 0.3s ease;
-
-        &:hover {
-            border-color: rgba(252, 224, 21, 0.2);
-            transform: translateY(-4px);
-            background: rgba(255, 255, 255, 0.03);
-        }
-
-        .service-icon {
-            font-size: 36px;
-            display: block;
-            margin-bottom: 16px;
-            font-family: 'JetBrains Mono', monospace;
-        }
-
-        h4 {
-            color: #FCE015;
-            font-size: 17px;
-            font-weight: 600;
-            margin: 0 0 12px 0;
-        }
-
-        p {
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 14px;
-            font-weight: 300;
-            line-height: 1.7;
-            margin: 0;
-        }
-    }
-
-    @media (max-width: 1200px) {
-        .services-grid {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-
-    @media (max-width: 600px) {
-        padding: 60px 1.5rem;
-
-        .services-header h2 {
-            font-size: 28px;
-        }
-
-        .services-grid {
-            grid-template-columns: 1fr;
-        }
-    }
+  }
 }
 
 // skills
 .skills-section {
-    padding: 80px 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+  padding: 80px 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 
-    .skills-header {
-        text-align: center;
-        margin-bottom: 60px;
+  .skills-header {
+    text-align: center;
+    margin-bottom: 60px;
 
-        h2 {
-            font-size: 40px;
-            font-weight: 700;
-            color: #fff;
-            margin: 0;
-        }
+    h2 {
+      font-size: 40px;
+      font-weight: 700;
+      color: #fff;
+      margin: 0;
+    }
+  }
+
+  .skills-categories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-bottom: 40px;
+  }
+
+  .skill-category {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    padding: 28px;
+
+    h3 {
+      font-size: 14px;
+      font-weight: 600;
+      color: #fce015;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin: 0 0 20px 0;
     }
 
-    .skills-categories {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 32px;
-        margin-bottom: 40px;
+    .skill-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
     }
 
-    .skill-category {
-        background: rgba(255, 255, 255, 0.02);
-        border: 1px solid rgba(255, 255, 255, 0.06);
-        border-radius: 16px;
-        padding: 28px;
+    .skill-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 10px;
+      padding: 8px 14px;
+      transition: border-color 0.3s;
 
-        h3 {
-            font-size: 14px;
-            font-weight: 600;
-            color: #FCE015;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin: 0 0 20px 0;
-        }
+      &:hover {
+        border-color: rgba(252, 224, 21, 0.2);
+      }
 
-        .skill-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
+      img {
+        width: 24px;
+        height: 24px;
+      }
 
-        .skill-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            border-radius: 10px;
-            padding: 8px 14px;
-            transition: border-color 0.3s;
+      span {
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.7);
+        font-weight: 400;
+      }
+    }
+  }
 
-            &:hover {
-                border-color: rgba(252, 224, 21, 0.2);
-            }
+  .ai-banner {
+    background: linear-gradient(135deg, rgba(252, 224, 21, 0.06) 0%, rgba(252, 224, 21, 0.02) 100%);
+    border: 1px solid rgba(252, 224, 21, 0.15);
+    border-radius: 16px;
+    padding: 36px;
+    text-align: center;
 
-            img {
-                width: 24px;
-                height: 24px;
-            }
-
-            span {
-                font-size: 13px;
-                color: rgba(255, 255, 255, 0.7);
-                font-weight: 400;
-            }
-        }
+    h3 {
+      font-size: 20px;
+      color: #fce015;
+      margin: 0 0 12px 0;
+      font-weight: 600;
     }
 
-    .ai-banner {
-        background: linear-gradient(135deg, rgba(252, 224, 21, 0.06) 0%, rgba(252, 224, 21, 0.02) 100%);
+    p {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.7;
+      margin: 0 0 20px 0;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .ai-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+
+      span {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 12px;
+        padding: 6px 16px;
+        border-radius: 20px;
+        background: rgba(252, 224, 21, 0.08);
+        color: rgba(252, 224, 21, 0.9);
         border: 1px solid rgba(252, 224, 21, 0.15);
-        border-radius: 16px;
-        padding: 36px;
-        text-align: center;
-
-        h3 {
-            font-size: 20px;
-            color: #FCE015;
-            margin: 0 0 12px 0;
-            font-weight: 600;
-        }
-
-        p {
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 14px;
-            font-weight: 300;
-            line-height: 1.7;
-            margin: 0 0 20px 0;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .ai-tags {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-
-            span {
-                font-family: 'JetBrains Mono', monospace;
-                font-size: 12px;
-                padding: 6px 16px;
-                border-radius: 20px;
-                background: rgba(252, 224, 21, 0.08);
-                color: rgba(252, 224, 21, 0.9);
-                border: 1px solid rgba(252, 224, 21, 0.15);
-            }
-        }
+      }
     }
+  }
 
-    @media (max-width: 1024px) {
-        .skills-categories {
-            grid-template-columns: 1fr;
-        }
+  @media (max-width: 1024px) {
+    .skills-categories {
+      grid-template-columns: 1fr;
     }
+  }
 
-    @media (max-width: 600px) {
-        padding: 60px 1.5rem;
+  @media (max-width: 600px) {
+    padding: 60px 1.5rem;
 
-        .skills-header h2 {
-            font-size: 28px;
-        }
+    .skills-header h2 {
+      font-size: 28px;
     }
+  }
 }
 
 // education
 .education {
-    padding: 80px 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
+  padding: 80px 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
 
-    .education-header {
-        text-align: center;
-        margin-bottom: 60px;
+  .education-header {
+    text-align: center;
+    margin-bottom: 60px;
 
-        h2 {
-            font-size: 40px;
-            font-weight: 700;
-            color: #fff;
-            margin: 0;
-        }
+    h2 {
+      font-size: 40px;
+      font-weight: 700;
+      color: #fff;
+      margin: 0;
+    }
+  }
+
+  .education-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .degree-card {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    background: linear-gradient(135deg, rgba(252, 224, 21, 0.06) 0%, rgba(252, 224, 21, 0.02) 100%);
+    border: 1px solid rgba(252, 224, 21, 0.2);
+    border-radius: 16px;
+    padding: 36px;
+
+    .degree-icon {
+      font-size: 48px;
+      flex-shrink: 0;
     }
 
-    .education-content {
+    .degree-info {
+      h3 {
+        font-size: 22px;
+        color: #fff;
+        margin: 0 0 6px 0;
+        font-weight: 700;
+      }
+
+      .degree-institution {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 15px;
+        font-weight: 300;
+        margin: 0 0 12px 0;
+      }
+
+      .degree-status {
+        display: inline-block;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 12px;
+        color: #28c840;
+        background: rgba(40, 200, 64, 0.1);
+        border: 1px solid rgba(40, 200, 64, 0.2);
+        padding: 4px 14px;
+        border-radius: 20px;
+      }
+    }
+  }
+
+  .certifications {
+    .cert-title {
+      font-size: 20px;
+      color: #fff;
+      font-weight: 600;
+      margin: 0 0 24px 0;
+    }
+
+    .cert-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .cert-group {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 16px;
+      padding: 24px;
+
+      .cert-provider {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 16px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+        img {
+          height: 32px;
+          width: auto;
+        }
+
+        span {
+          font-size: 16px;
+          font-weight: 600;
+          color: #fff;
+        }
+      }
+
+      .cert-list {
         display: flex;
         flex-direction: column;
-        gap: 40px;
+        gap: 10px;
+      }
+
+      .cert-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 0;
+
+        .cert-name {
+          color: rgba(255, 255, 255, 0.7);
+          font-size: 14px;
+          font-weight: 300;
+        }
+
+        a {
+          font-family: "JetBrains Mono", monospace;
+          font-size: 12px;
+          color: #fce015;
+          text-decoration: none;
+          opacity: 0.7;
+          transition: opacity 0.3s;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 60px 1.5rem;
+
+    .education-header h2 {
+      font-size: 28px;
     }
 
     .degree-card {
-        display: flex;
-        align-items: center;
-        gap: 24px;
-        background: linear-gradient(135deg, rgba(252, 224, 21, 0.06) 0%, rgba(252, 224, 21, 0.02) 100%);
-        border: 1px solid rgba(252, 224, 21, 0.2);
-        border-radius: 16px;
-        padding: 36px;
+      flex-direction: column;
+      text-align: center;
+      padding: 28px;
 
-        .degree-icon {
-            font-size: 48px;
-            flex-shrink: 0;
-        }
-
-        .degree-info {
-            h3 {
-                font-size: 22px;
-                color: #fff;
-                margin: 0 0 6px 0;
-                font-weight: 700;
-            }
-
-            .degree-institution {
-                color: rgba(255, 255, 255, 0.5);
-                font-size: 15px;
-                font-weight: 300;
-                margin: 0 0 12px 0;
-            }
-
-            .degree-status {
-                display: inline-block;
-                font-family: 'JetBrains Mono', monospace;
-                font-size: 12px;
-                color: #28c840;
-                background: rgba(40, 200, 64, 0.1);
-                border: 1px solid rgba(40, 200, 64, 0.2);
-                padding: 4px 14px;
-                border-radius: 20px;
-            }
-        }
+      .degree-info h3 {
+        font-size: 18px;
+      }
     }
 
-    .certifications {
-        .cert-title {
-            font-size: 20px;
-            color: #fff;
-            font-weight: 600;
-            margin: 0 0 24px 0;
-        }
-
-        .cert-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-        }
-
-        .cert-group {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            border-radius: 16px;
-            padding: 24px;
-
-            .cert-provider {
-                display: flex;
-                align-items: center;
-                gap: 12px;
-                margin-bottom: 16px;
-                padding-bottom: 16px;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-
-                img {
-                    height: 32px;
-                    width: auto;
-                }
-
-                span {
-                    font-size: 16px;
-                    font-weight: 600;
-                    color: #fff;
-                }
-            }
-
-            .cert-list {
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .cert-item {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 8px 0;
-
-                .cert-name {
-                    color: rgba(255, 255, 255, 0.7);
-                    font-size: 14px;
-                    font-weight: 300;
-                }
-
-                a {
-                    font-family: 'JetBrains Mono', monospace;
-                    font-size: 12px;
-                    color: #FCE015;
-                    text-decoration: none;
-                    opacity: 0.7;
-                    transition: opacity 0.3s;
-
-                    &:hover {
-                        opacity: 1;
-                    }
-                }
-            }
-        }
+    .cert-item {
+      flex-direction: column;
+      align-items: flex-start !important;
+      gap: 4px;
     }
-
-    @media (max-width: 768px) {
-        padding: 60px 1.5rem;
-
-        .education-header h2 {
-            font-size: 28px;
-        }
-
-        .degree-card {
-            flex-direction: column;
-            text-align: center;
-            padding: 28px;
-
-            .degree-info h3 {
-                font-size: 18px;
-            }
-        }
-
-        .cert-item {
-            flex-direction: column;
-            align-items: flex-start !important;
-            gap: 4px;
-        }
-    }
+  }
 }

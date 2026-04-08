@@ -9,14 +9,21 @@ body {
     radial-gradient(ellipse at 80% 20%, rgba(252, 224, 21, 0.02) 0%, transparent 50%);
   margin: 0;
   color: #fff;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 section {
   padding: 0 2rem;
   margin: 0 auto;
+}
+
+@media (max-width: 700px) {
+  section {
+    padding: 0 0.5rem;
+  }
 }
 
 hr {
@@ -59,11 +66,16 @@ hr {
   cursor: pointer;
   will-change: box-shadow, transform;
   background: radial-gradient(100% 100% at 100% 0%, #fffdef 0%, #fce015 100%);
-  box-shadow: 0px 2px 4px rgb(45 35 66 / 40%), 0px 7px 13px -3px #fce01533, inset 0px -3px 0px #fce01580;
+  box-shadow:
+    0px 2px 4px rgb(45 35 66 / 40%),
+    0px 7px 13px -3px #fce01533,
+    inset 0px -3px 0px #fce01580;
   padding: 13px 10px 10px 10px;
   border-radius: 10px;
-  font-family: 'Montserrat', sans-serif;
-  transition: transform 0.2s, box-shadow 0.2s;
+  font-family: "Montserrat", sans-serif;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
 
   &:hover {
     transform: translateY(-2px);
